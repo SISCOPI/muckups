@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/icons.css">
+    <link rel="stylesheet" href="css/responsee.css">
+    <link rel="stylesheet" href="owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" href="owl-carousel/owl.theme.css">
+    <!-- CUSTOM STYLE -->
+    <link rel="stylesheet" href="css/template-style.css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>    
+    <script type="text/javascript" src="js/validation.js"></script> 
+  </head>   
+  
+  <body class="size-1140">
+  
+
+    
+    <!-- MAIN -->
+    <main role="main">
+      <!-- Content -->
+      <article>
+        <header class="section-small-padding background-primary text-center">
+            <h1 class="text-white margin-bottom-0 text-size-30 text-thin text-line-height-1">Login</h1>
+        </header>
+        <div class="section background-white"> 
+          <div class="line">
+            <div class="margin">
+              
+      
+              
+              <!-- Contact Form -->
+              <div class="s-12 m-12 l-6">
+                <h2 class="text-uppercase text-strong margin-bottom-0">Login</h2>
+                <form class="customform">
+                  <div class="line">
+                    <div class="margin">
+                      <div class="s-12 m-12 l-6">
+                        <input name="email" class="required email border-radius" placeholder="e-mail o username" title="Your e-mail o username" type="text" />
+                      </div>
+                      <div class="s-12 m-12 l-6">
+                        <input name="name" class="name border-radius" placeholder="Tu nombre" title="Tu contraseña" type="text" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="s-12 m-12 l-4"><button class="submit-form button background-primary border-radius text-white" type="submit">Iniciar</button></div> 
+                 <p>
+                <a class="forgot" href="#">¿Olvidó su password?</a>
+                </p>
+				
+				</form>
+              </div>  
+            </div>  
+          </div> 
+        </div> 
+      </article>
+
+    </main>
+    
+    <!--FOOTER -->
+    <div id="footer">
+      <!-- Content will be inserted by jQuery from footer.html -->
+    </div>
+    <script type="text/javascript" src="js/responsee.js"></script>
+    <script type="text/javascript" src="owl-carousel/owl.carousel.js"></script>
+    <script type="text/javascript" src="js/template-scripts.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			
+				
+				// Getting the variable's value from a link 
+				var loginBox = $(this).attr('href');
+
+				//Fade in the Popup and add close button
+				$(loginBox).fadeIn(300);
+				
+				//Set the center alignment padding + border
+				var popMargTop = ($(loginBox).height() + 24) / 2; 
+				var popMargLeft = ($(loginBox).width() + 24) / 2; 
+				
+				$(loginBox).css({ 
+					'margin-top' : -popMargTop,
+					'margin-left' : -popMargLeft
+				});
+				
+				// Add the mask to body
+				$('body').append('<div id="mask"></div>');
+				$('#mask').fadeIn(300);
+				
+				return false;
+			
+			// When clicking on the button close or the mask layer the popup closed
+			$('a.close, #mask').live('click', function() { 
+			  $('#mask , .login-popup').fadeOut(300 , function() {
+				$('#mask').remove();  
+			}); 
+			return false;
+			});
+		});
+	</script>
+   </body>
+</html>

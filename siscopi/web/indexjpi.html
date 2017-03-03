@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SISCOPI index JPI</title>
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/icons.css">
+    <link rel="stylesheet" href="css/responsee.css">
+    <link rel="stylesheet" href="owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" href="owl-carousel/owl.theme.css">
+    <!-- CUSTOM STYLE -->
+    <link rel="stylesheet" href="css/template-style.css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/jquery.leanModal.min.js"></script>
+	<script type="text/javascript" src="js/funcionesJPIUsers.js"></script>
+	<script type="text/javascript" src="js/modal.js"></script>
+	<script type="text/javascript" src="js/jquery-ui-11.js"></script>
+
+
+	
+  </head>  
+  
+  
+  <body class="size-1140">
+	<div id="header"></div>
+    <!-- MAIN -->
+    <main role="main">
+      <!-- Main Carousel -->
+      <section class="section background-dark" id="iniciodiv">
+        <div class="line" >
+          <div class="carousel-fade-transition owl-carousel carousel-main carousel-nav-white carousel-wide-arrows">
+            <div class="item">
+              <div class="s-12 center">
+                <img src="img/01-boxed.jpg" alt="">
+                <div class="carousel-content">
+                  <div class="padding-2x">
+                    <div class="s-12 m-12 l-8">
+                      <p class="text-white text-s-size-20 text-m-size-40 text-l-size-60 margin-bottom-40 text-thin text-line-height-1">html5</p>
+                      <p class="text-white text-size-16 margin-bottom-40">prueba</p>  
+                    </div>                  
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="s-12 center">
+                <img src="img/02-boxed.jpg" alt="">
+                <div class="carousel-content">
+                  <div class="padding-2x">
+                    <div class="s-12 m-12 l-8">
+                      <p class="text-white text-s-size-20 text-m-size-40 text-l-size-60 margin-bottom-40 text-thin text-line-height-1">With Fully Responsive Components</p>
+                      <p class="text-white text-size-16 margin-bottom-30">Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis</p>    
+                    </div>                  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>  
+        </div>
+      </section>
+      
+      <!-- Section 1 -->
+      <section class="section background-white"style="display:none" id="altaUser" > 
+          <h2 class="text-primary margin-bottom-0 text-size-30 text-thin text-line-height-1 text-center">Alta Usuarios</h2>
+        <div class="line" >
+          <div class="margin">
+            <form class="customform" action="">
+                  <div class="line">
+                    <div class="margin">
+                      <div class="s-12 m-12 l-6">
+						<label> Nombre(s):</label>
+                        <input name="nombre" class="required email border-radius text-l-size-16" placeholder="" title="" type="text" />
+                      </div>
+                      <div class="s-12 m-12 l-6">
+						<label> Apellido Paterno:</label>
+                        <input name="ap" class="required name border-radius text-l-size-16" placeholder="" title="" type="text" />
+                      </div>
+					   <div class="s-12 m-12 l-6">
+						<label> Apellido Materno:</label>
+                        <input name="am" class="required name border-radius text-l-size-16" placeholder="" title="" type="text" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="s-12"> 
+					<label> Email:</label>
+                    <input name="email" class="required subject border-radius text-l-size-16" placeholder="" title="" type="text" />
+                  </div>
+				  <div class="margin">
+				  <div class="s-12 m-12 l-6"> 
+					<label> Grado Acádemico:</label>
+                    <select name="grado" class="subject border-radius text-l-size-16" id="grado">
+						<option value="5">Lic</option>
+						<option value="4">Dr</option>
+						<option value="3">Ing</option>
+						<option value="2">Alumno</option>
+					</select>
+                  </div>
+				  <div class="s-12 m-12 l-6" style="display:none" id="nocontrol">
+					<label> No Control:</label>
+                    <input name="nocontrol" class="required name border-radius text-l-size-16" placeholder="" title="" type="text" />
+                  </div>
+				 </div>
+                  <div class="s-12"><button class="submit-form button background-primary border-radius text-white" type="submit">Alta</button></div> 
+                </form>
+        </div>
+      </section>
+
+      <hr class="break margin-top-bottom-0">
+    
+	<section class="section background-white"style="display:none" id="actuaUser" > 
+		<h2 class="text-primary margin-bottom-0 text-size-30 text-thin text-line-height-1 text-center">Baja y Modificación de Usuarios</h2>
+        <div class="line" >
+          <div class="margin">
+            <form class="customform" action="">
+                  <div class="line padding-2x block-bordered border-radius">
+                    <div class="margin">
+                      <div class="s-12 m-12 l-6">
+                        <input name="bususer" class="required email border-radius text-l-size-16" placeholder="" title="" type="radio" checked = "checked"/>
+						<label>Email</label>
+						<input name="emailb" class="required name border-radius text-l-size-16" placeholder="" title="" type="text"/>
+                      </div>
+                      <div class="s-12 m-12 l-6" id="busNombre">
+						<input name="bususer" class="required email border-radius text-l-size-16" placeholder="" title="" type="radio" />
+						<label>Nombre</label>
+                        <input name="nombreb" class="required name border-radius text-l-size-16" placeholder="Nombre(s)" title="" type="text" />
+						<input name="apb" class="required name border-radius text-l-size-16" placeholder="Apellido Paterno" title="" type="text" />
+						<input name="amb" class="required name border-radius text-l-size-16" placeholder="Apellido Materno" title="" type="text" />
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <div class="s-12"><button id="buscar" class="submit-form button background-primary border-radius text-white" type="submit">Buscar</button></div>
+				  <div class="s-12" style="display:none" id="tablabuscar">
+				  <h2 class="text-primary margin-bottom-0 text-size-30 text-thin text-line-height-1 text-center">Resultados Búsqueda</h2>
+					<table>
+						<thead>
+							<tr>
+								<th>Id</th>
+								<th>Nombre Completo</th>
+								<th>Semestre Alta</th>
+								<th>Email</th>
+								<th>Activo</th>
+								<th>Más Inf</th>
+								<th>Baja</th>
+								<th>Modificar</th>
+								
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>001</td>
+								<td>Juan José Rivera Alemán</td>
+								<td>Ene-Jun 2017 2017</td>
+								<td>prueba@prueba.com</td>
+								<td>Si</td>
+								<td><img id="img1" class="img1c" src="img/sgaa_icono_informacion.png" data-target="masinfo" data-toggle="modal"/></td>
+								<td><img src="img/Delete_Icon.png" alt="¿borrar?" onclick="masInfUser()"></td>
+								<td><img src="img/edit.png" alt="editar" onclick="masInfUser()"></td>
+							</tr>
+						</tbody>
+					</table>
+				  </div>
+                </form>
+        </div>
+      </section>	
+
+      
+    </main>
+	
+	<div id="masinfo" class="modal dialog-confirm">
+		<div class="modal-window">
+			<div class="line padding-3x block-bordered border-radius">
+				<span class="close" data-dismiss="modal">&times;</span>
+				<h3 class="text-primary margin-bottom-15 text-size-30 text-thin text-line-height-1 text-center text-strong">Ficha Usuario</h2>
+				<p></p>
+				<table>
+					<tbody>
+					<tr>
+						<td>
+							<label class="text-primary text-size-15">Nombre Completo:</label>
+							<label class="text-size-15">Ing. Juan José Rivera Alemán</label>
+						</td>
+						<td>
+							<label class="text-primary text-size-15">Email:</label>
+							<label class="text-size-15">prueba@prueba.com.mx</label>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label class="text-primary text-size-15">Fecha de alta:</label>
+							<label class="text-size-15">dd/mm/aaaa</label>
+						</td>
+						<td>
+							<label class="text-primary text-size-15">Usuario alta:</label>
+							<label class="text-size-15">JPI2</label>
+						</td>
+					</tr>
+					</tbody>
+				</table>
+				<h3 class="text-primary margin-bottom-10 text-size-20 text-thin text-line-height-1 text-center text-strong">Roles activos</h2>
+				<table>
+					<tbody>
+					<tr>
+						<td class="background-primary text-center">
+							<label class="text-dark text-size-10 text-strong">JPI</label>	
+						</td>
+						<td class="background-primary text-center">
+							<label class="text-dark text-size-10 text-strong">Asesor</label>
+						</td>
+						<td class="background-primary text-center">
+							<label class="text-dark text-size-10 text-strong">Profesor Asignatura</label>
+						</td>
+						<td class="background-primary text-center">
+							<label class="text-dark text-size-10 text-strong">Evaluador</label>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label class="text-size-10">Administrador Siscopi</label>
+						</td>
+						<td>
+							<table>
+								<thead>
+									<tr>
+										<th>Proyecto</th>
+										<th>Semestre</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>
+											<label class="text-size-10">casa domotica</label>
+										</td>
+										<td>
+											<label class="text-size-10">Ene-Jun 2017</label>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<label class="text-size-10">casa domotica</label>
+										</td>
+										<td>
+											<label class="text-size-10">Ene-Jun 2017</label>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<label class="text-size-10">casa domotica</label>
+										</td>
+										<td>
+											<label class="text-size-10">Ene-Jun 2017</label>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<label class="text-size-10">casa domotica</label>
+										</td>
+										<td>
+											<label class="text-size-10">Ene-Jun 2017</label>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+						<td>
+							<table>
+								<thead>
+									<tr>
+										<th>Asignatura</th>
+										<th>Semestre</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>
+											<label class="text-size-10">Taller Inv. II</label>
+										</td>
+										<td>
+											<label class="text-size-10">Ene-Jun 2017</label>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<label class="text-size-10">Taller Inv. II</label>
+										</td>
+										<td>
+											<label class="text-size-10">Ene-Jun 2017</label>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<label class="text-size-10">Taller Inv. III</label>
+										</td>
+										<td>
+											<label class="text-size-10">Ene-Jun 2017</label>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<label class="text-size-10">Formulación y Eva. de proyectos</label>
+										</td>
+										<td>
+											<label class="text-size-10">Ene-Jun 2017</label>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+						<td>
+							<table>
+								<thead>
+									<tr>
+										<th>Proyecto</th>
+										<th>Semestre</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>
+											<label class="text-size-10">Sistema RRHH</label>
+										</td>
+										<td>
+											<label class="text-size-10">Ene-Jun 2017</label>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<label class="text-size-10">Brazo neumático</label>
+										</td>
+										<td>
+											<label class="text-size-10">Ene-Jun 2017</label>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<label class="text-size-10">Laboratorio virtual</label>
+										</td>
+										<td>
+											<label class="text-size-10">Ene-Jun 2017</label>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr>
+					</tbody>
+				</table>
+				<div class="text-center padding-3x">
+					<button class="button" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="dialog-borrar" style="display:none" >
+		<div >
+		<p>
+			<span class="ui-icon ui-icon-alert" style="float:left; margin:12px 12px 20px 0;"></span>
+			These items will be permanently deleted and cannot be recovered. Are you sure?
+		</p>
+		</div>
+	</div>
+    <div id="footer">
+      <!-- Content will be inserted by jQuery from footer.html -->
+    </div>
+    
+    <script type="text/javascript" src="js/responsee.js"></script>
+    <script type="text/javascript" src="owl-carousel/owl.carousel.js"></script>
+    <script type="text/javascript" src="js/template-scripts.js"></script>   
+	<script>
+		$(function() {
+		 $( "#header" ).load("headerjpi.html");
+		 $( "#footer" ).load("footer.html");
+		  
+		
+		
+		});
+		
+		$(document).ready(function(){
+			$('a[href="#altaUsuarios"]').click(function(){
+			//alert('Sign new href executed.'); 
+			$("#altaUser" ).show();
+			$("#inicioiv" ).hide();
+		}); 
+		
+		$( "#dialog-borrar" ).dialog({
+		  title: '¡Importante!',
+		  resizable: false,
+		  height: "auto",
+		  width: 400,
+		  modal: true,
+		  autoOpen: false,
+		  buttons: {
+			"Baja": function() {
+			  $( this ).dialog( "close" );
+			  
+			},
+			Cancel: function() {
+			  $( this ).dialog( "close" );
+			}
+		  },
+			create:function () {
+			$(this).closest(".ui-dialog").find(".ui-button:first").addClass("acepta");
+			}
+		});
+		
+		
+		
+		$( "#grado").change(function () {
+			var str = "";
+			$( "select option:selected" ).each(function() {
+
+			  str= $( this ).val();
+			  
+			  if(str==2){
+				$("#nocontrol" ).show();
+			  }
+			  else{
+				$("#nocontrol" ).hide();
+			  }
+			});
+		  })
+		$('#buscar').click(function(){
+			$("#tablabuscar").show();
+			return false;
+		}); 
+		});
+		
+	</script>
+
+   </body>
+</html>
