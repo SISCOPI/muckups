@@ -1,0 +1,118 @@
+
+
+    <!-- HEADER -->
+    <header role="banner">    
+      <!-- Top Bar -->
+      <div class="top-bar background-white">
+        <div class="line">
+          <div class="s-12 m-6 l-6">
+            <div class="top-bar-contact">
+              <p class="text-size-12">Contacto: 01800 siscopi | <a class="text-orange-hover" href="mailto:contact@sampledomain.com">contact@sampledomain.com</a></p>
+            </div>
+          </div>
+          <div class="s-12 m-6 l-6">
+            <div class="right">
+              <ul class="top-bar-social right">
+                <li><a href="/"><i class="icon-facebook_circle text-orange-hover"></i></a></li>
+                <li><a href="/"><i class="icon-twitter_circle text-orange-hover"></i></a> </li>
+                <li><a href="/"><i class="icon-google_plus_circle text-orange-hover"></i></a></li>
+                <li><a href="/"><i class="icon-instagram_circle text-orange-hover"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Top Navigation -->
+      <nav class="background-white background-primary-hightlight">
+		<div>
+			<a href="" align="center"><img src="img/footer-image.png" alt=""></a>
+		</div>
+        <div class="line">
+		
+          <div class="s-12 l-2">
+            <a href="index.html" class="logo"><img src="img/SISCOPI-logo.png" alt=""></a>
+          </div>
+          <div class="top-nav s-12 l-10">
+            <p class="nav-text"></p>
+            <ul class="right chevron">
+              <li><a href="index.html">Inicio</a></li>
+              <li><a href="products.html">Banco de proyectos</a></li>
+              <li><a>Formatos</a>
+                <ul>
+                  <li><a>Preregistro</a>
+                    <ul>
+                      <li><a>Service 1 A</a></li>
+                      <li><a>Service 1 B</a></li>
+                    </ul>
+                  </li>
+                  <li><a>Etapa 1</a></li>
+                </ul>
+              </li>
+              <li><a>Acerca De</a>
+				<ul>
+                  <li><a href="about.html">Objetivos</a></li>
+                  <li><a>Misión</a></li>
+				  <li><a>Visión</a></li>
+				  <li><a>Valores</a></li>
+				  <li><a>Organigrama</a></li>
+                </ul>
+			  </li>
+              <li><a href="noticias.html">Noticias</a></li>
+              <li><a href="contact.html">Contacto</a></li>
+			  <li><a href="#loginmodal" id="modaltrigger" class="close background-primary">Iniciar Sesión</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+	  
+	  <div id="loginmodal" style="display:none;" class="background-login">
+		<a href="#" class="close"><img src="img/close_pop.png" class="btn_close" title="Close Window" alt="Close" /></a>
+            <h2 class="text-uppercase text-strong margin-bottom-30">Login</h2>
+              <form class="customform2" id="loginform">
+                  
+                    <div class="margin">
+                      <div class="s-12 m-12 l-6">
+                        <input name="email" class="required email border-radius" placeholder="e-mail o username" title="e-mail o username" type="text" id="username"/>
+                      </div>
+                      <div class="s-12 m-12 l-6">
+                        <input name="name" class="name border-radius" placeholder="Tu contraseña" title="Tu contraseña" type="password" />
+                      </div>
+                    </div>
+					<br></br>
+					<div class="s-12 m-12 l-4"><button class="submit-form button background-primary border-radius text-white" type="submit">Iniciar</button></div> 
+					<br></br>
+					<p>
+						<a class="forgot" href="#">¿Olvidó su password?</a>
+					</p>
+                  
+                  
+			</form>
+        </div>  
+    </header>
+	
+	<script type="text/javascript">
+	$(function(){
+	  $('#loginform').submit(function(e){
+		var user=$('#username').val();
+		
+		if(user=="jpi" || user=="JPI"){
+			window.location.replace("indexjpi.html");
+		}
+		return false;
+	  });
+	  
+	  $('#modaltrigger').leanModal({ top: 110, overlay: 0.45, closeButton: ".hidemodal" });
+
+	});
+	
+	$(document).ready(function() {
+
+	$('a.close, #mask').live('click', function() { 
+	  $('#mask , .login-popup').fadeOut(300 , function() {
+		$('#mask').remove();  
+	}); 
+	return false;
+	});
+});
+	</script>
