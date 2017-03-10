@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SISCOPI Template</title>
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/icons.css">
+    <link rel="stylesheet" href="css/responsee.css">
+    <link rel="stylesheet" href="owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" href="owl-carousel/owl.theme.css">
+    <!-- CUSTOM STYLE -->
+    <link rel="stylesheet" href="css/template-style.css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>    
+  </head> 
+  
+  <body class="size-1140">
+  
+    <!-- HEADER -->
+   <div id="header">
+      <!-- Content will be inserted by jQuery from header.html -->
+    </div>
+    
+    <!-- MAIN -->
+    <main role="main">
+      <!-- Content -->
+      <article>
+      <!--   <header class="section-small-padding background-primary ">-->
+            <h1 class="text-white margin-bottom-0 text-size-30 text-thin text-line-height-1 background-primary text-center">Registrar propuesta (usuarios no registrados)</h1>
+
+        <div class="section background-white">
+			  <div class="margin">
+				<form class="customform" action="">
+					<h2 class="text-primary margin-bottom-0 text-size-10 text-right">Fecha solicitud:</h1>
+					
+					<label id="fechahoy" class="margin-bottom-0 text-size-10 text-right"></label>
+					
+					<h2 class="text-dark margin-bottom-0 text-size-10 text-center">Aspectos Generales</h1>
+					
+					<table>
+						<thead>
+							<tr>
+								<th class="text-center">Concepto</th>
+								<th class="text-center">Descripción</th>
+							</tr>
+						</thead>
+						<tbody>
+						<tr>
+							<td class="text-dark text-center">Nombre del proyecto</td>
+							<td><textarea rows="1" cols="20" maxlength="50" title="procurar redactar en términos comprensibles" placeholder="procurar redactar en términos comprensibles"></textarea></td>
+						</tr>
+						<tbody>
+					</table>
+					  <div class="line">
+						<div class="margin">
+						  <div class="s-12 m-12 l-6">
+							<label> Nombre(s):</label>
+							<input name="nombre" class="required email border-radius text-l-size-16" placeholder="" title="" type="text" />
+						  </div>
+						  <div class="s-12 m-12 l-6">
+							<label> Apellido Paterno:</label>
+							<input name="ap" class="required name border-radius text-l-size-16" placeholder="" title="" type="text" />
+						  </div>
+						   <div class="s-12 m-12 l-6">
+							<label> Apellido Materno:</label>
+							<input name="am" class="required name border-radius text-l-size-16" placeholder="" title="" type="text" />
+						  </div>
+						</div>
+					  </div>
+					  <div class="s-12"> 
+						<label> Email:</label>
+						<input name="email" class="required subject border-radius text-l-size-16" placeholder="" title="" type="text" />
+					  </div>
+					  <div class="margin">
+					  <div class="s-12 m-12 l-6"> 
+						<label> Grado Acádemico:</label>
+						<select name="grado" class="subject border-radius text-l-size-16" id="grado">
+							<option value="5">Lic</option>
+							<option value="4">Dr</option>
+							<option value="3">Ing</option>
+							<option value="2">Alumno</option>
+						</select>
+					  </div>
+					  <div class="s-12 m-12 l-6" style="display:none" id="nocontrol">
+						<label> No Control:</label>
+						<input name="nocontrol" class="required name border-radius text-l-size-16" placeholder="" title="" type="text" />
+					  </div>
+					 </div>
+					  <div class="s-12"><button class="submit-form button background-primary border-radius text-white" type="submit">Alta</button></div> 
+					</form>
+			</div>
+		
+          
+        </div> 
+      </article>
+    </main>
+    
+    <!--FOOTER -->
+	<div id="footer">
+      <!-- Content will be inserted by jQuery from footer.html -->
+    </div>
+    <script type="text/javascript" src="js/responsee.js"></script>
+    <script type="text/javascript" src="owl-carousel/owl.carousel.js"></script>
+    <script type="text/javascript" src="js/template-scripts.js"></script>
+     <script>
+		$(document).ready(function(){ 
+		 $( "#header" ).load( "header.html" );
+		 $( "#footer" ).load( "footer.html" );
+		 
+		 var f = new Date();
+		 var fh= f.getDate()+"/"+(f.getMonth() +1)+"/"+f.getFullYear();
+		 
+		 document.getElementById("fechahoy").innerHTML = fh;
+		
+		$( document ).tooltip();		
+		 
+		}); 
+	</script>
+   </body>
+</html>

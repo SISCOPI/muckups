@@ -11,13 +11,16 @@
     <link rel="stylesheet" href="owl-carousel/owl.theme.css">
     <!-- CUSTOM STYLE -->
     <link rel="stylesheet" href="css/template-style.css">
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    
     <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
     <script type="text/javascript" src="js/jquery-ui.min.js"></script>
 	<script type="text/javascript" src="js/jquery.leanModal.min.js"></script>
 	<script type="text/javascript" src="js/funcionesJPIUsers.js"></script>
 	<script type="text/javascript" src="js/modal.js"></script>
 	<script type="text/javascript" src="js/jquery-ui-11.js"></script>
+	<script type="text/javascript" src="js/ui-datepicker-es-MX.js"></script>
+	
+	
 
 
 	
@@ -64,7 +67,7 @@
       
       <!-- Section 1 -->
       <section class="section background-white"style="display:none" id="altaUser" > 
-          <h2 class="text-primary margin-bottom-0 text-size-30 text-thin text-line-height-1 text-center">Alta Usuarios</h2>
+          <h2 class="text-primary margin-bottom-0 text-size-30 text-thin text-line-height-1 text-center ">Alta Usuarios</h2>
         <div class="line" >
           <div class="margin">
             <form class="customform" action="">
@@ -106,6 +109,7 @@
                   <div class="s-12"><button class="submit-form button background-primary border-radius text-white" type="submit">Alta</button></div> 
                 </form>
         </div>
+		</div>
       </section>
 
       <hr class="break margin-top-bottom-0">
@@ -167,7 +171,126 @@
                 </form>
         </div>
       </section>	
-
+	
+	      <section class="section background-white"style="display:none" id="fechasG" > 
+          <h2 class="text-primary margin-bottom-10 text-size-30 text-thin text-line-height-1 text-center">Fechas de Gestión</h2>
+		  <h3 class="text-primary margin-bottom-0 text-size-30 text-thin text-line-height-1 text-center">Enero-Junio 2017</h3>
+        <div class="line" >
+          <div class="margin">
+            <form class="customform" action="">
+				
+					<fieldset class="block-bordered">
+						<legend style="color:blue;font-weight:bold;"><h3 class="primary-color-dark margin-bottom-0 text-size-20 text-thin text-line-height-1 text-left"><b>Semestre<b></h3></legend>
+						  <div class="line">
+							<div class="margin">
+							  <div class="s-5 m-8 l-4">
+								<label> Fecha Inicio:</label><label> Sin establecer:</label>
+								<input name="isemestre" id="isemestre" class="required email border-radius text-l-size-16" placeholder="" title="" type="text" />
+								
+							  </div>
+							  <div class="s-5 m-8 l-4"> 
+								<label> Fecha Fin:</label></label><label> Sin establecer:</label>
+								<input name="fsemestre" id="fsemestre" class="required email border-radius text-l-size-16" placeholder="" title="" type="text" />
+							  </div>
+							   
+							   <div class="l-2 " >
+								<button class="submit-form button background-primary border-radius-fe text-white" type="submit">Alta</button>
+							  </div>
+							</div>
+						  </div>
+					</fieldset>
+				<h3 class="primary-color-dark margin-bottom-0 text-size-25 text-thin text-line-height-1 text-left"><b>Evaluaciones<b></h3>
+				  <fieldset class="block-bordered">
+					<legend style="color:blue;font-weight:bold;">
+						<h3 class="primary-color-dark margin-bottom-0 text-size-15 text-thin text-line-height-1 text-left"><b>Primera<b></h3>
+					</legend>
+					  <div class="line">
+						<div class="margin">
+						  <div class="s-5 m-8 l-4">
+							<label> Fecha Inicio:</label><label> Sin establecer:</label>
+							<input name="ieva1" id="ieva1" class="required email border-radius text-l-size-16" placeholder="" title="" type="text" />
+							
+						  </div>
+						  <div class="s-5 m-8 l-4"> 
+							<label> Fecha Fin:</label></label><label> Sin establecer:</label>
+							<input name="feva1" id="feva1" class="required email border-radius text-l-size-16" placeholder="" title="" type="text" />
+						  </div>
+						   
+						   <div class="l-2 " >
+							<button class="submit-form button background-primary border-radius-fe text-white" type="submit">Alta</button>
+						  </div>
+						</div>
+					  </div>
+				  </fieldset>
+				  <fieldset class="block-bordered">
+					<legend style="color:blue;font-weight:bold;">
+						<h3 class="primary-color-dark margin-bottom-0 text-size-15 text-thin text-line-height-1 text-left"><b>Segunda<b></h3>
+					</legend>
+					  <div class="line">
+						<div class="margin">
+						  <div class="s-5 m-8 l-4">
+							<label> Fecha Inicio:</label><label> Sin establecer:</label>
+							<input name="ieva2" id="ieva2" class="required email border-radius text-l-size-16" placeholder="" title="" type="text" />
+							
+						  </div>
+						  <div class="s-5 m-8 l-4"> 
+							<label> Fecha Fin:</label></label><label> Sin establecer:</label>
+							<input name="feva2" id="feva2" class="required email border-radius text-l-size-16" placeholder="" title="" type="text" />
+						  </div>
+						   
+						   <div class="l-2 " >
+							<button class="submit-form button background-primary border-radius-fe text-white" type="submit">Alta</button>
+						  </div>
+						</div>
+					  </div>
+				  </fieldset>
+				  <fieldset class="block-bordered">
+					<legend style="color:blue;font-weight:bold;">
+						<h3 class="primary-color-dark margin-bottom-0 text-size-15 text-thin text-line-height-1 text-left"><b>Tercera<b></h3>
+					</legend>
+					  <div class="line">
+						<div class="margin">
+						  <div class="s-5 m-8 l-4">
+							<label> Fecha Inicio:</label><label> Sin establecer:</label>
+							<input name="ieva3" id="ieva3" class="required email border-radius text-l-size-16" placeholder="" title="" type="text" />
+							
+						  </div>
+						  <div class="s-5 m-8 l-4"> 
+							<label> Fecha Fin:</label></label><label> Sin establecer:</label>
+							<input name="feva3" id="feva3" class="required email border-radius text-l-size-16" placeholder="" title="" type="text" />
+						  </div>
+						   
+						   <div class="l-2 " >
+							<button class="submit-form button background-primary border-radius-fe text-white" type="submit">Alta</button>
+						  </div>
+						</div>
+					  </div>
+				  </fieldset>
+				  <fieldset class="block-bordered">
+					<legend style="color:blue;font-weight:bold;">
+						<h3 class="primary-color-dark margin-bottom-0 text-size-15 text-thin text-line-height-1 text-left"><b>Final<b></h3>
+					</legend>
+                  <div class="line">
+                    <div class="margin">
+                      <div class="s-5 m-8 l-4">
+						<label> Fecha Inicio:</label><label> Sin establecer:</label>
+                        <input name="ievaf" id="ievaf" class="required email border-radius text-l-size-16" placeholder="" title="" type="text" />
+						
+                      </div>
+                      <div class="s-5 m-8 l-4"> 
+						<label> Fecha Fin:</label></label><label> Sin establecer:</label>
+                        <input name="fevaf" id="fevaf" class="required email border-radius text-l-size-16" placeholder="" title="" type="text" />
+                      </div>
+					   
+					   <div class="l-2 " >
+						<button class="submit-form button background-primary border-radius-fe text-white" type="submit">Alta</button>
+                      </div>
+                    </div>
+                  </div>
+				</fieldset>
+                </form>
+        </div>
+      </section>
       
     </main>
 	

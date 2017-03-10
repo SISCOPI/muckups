@@ -669,7 +669,7 @@ a.background-red{
 
 /* Containers */
 .section  { 
-  padding: 6rem 1.25rem;
+  padding: 2.5rem 1.25rem;
 }
 .section-small-padding  { 
   padding: 2.5rem 1.25rem;
@@ -713,6 +713,9 @@ a.background-red{
 }
 .border-radius  { 
   border-radius: 3px;
+}
+.border-radius-fe  { 
+  border-radius: 5px;
 }
 .content-center-vertical {
   position: absolute;
@@ -1931,9 +1934,9 @@ img.btn_close {
 	margin: -28px -28px 0 0;
 }
 
-fieldset { 
+/*fieldset { 
 	border:none; 
-}
+}*/
 
 form.signin .textbox label { 
 	display:block; 
@@ -2039,7 +2042,7 @@ form.signin input::-webkit-input-placeholder { color:#bbb; text-shadow:0 0 2px #
     display: block;
 }
 
-.ui-dialog {
+/*.ui-dialog {
 	top: 0;
 	left: 0;
 	padding: .2em;
@@ -2102,7 +2105,7 @@ form.signin input::-webkit-input-placeholder { color:#bbb; text-shadow:0 0 2px #
     width: 150px;
     background: #F86379;
     
-}
+}*/
 
 
 

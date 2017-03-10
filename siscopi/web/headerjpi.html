@@ -32,18 +32,20 @@
 		
           <div class="s-12 l-2">
             <a href="index.html" class="logo"><img src="img/SISCOPI-logo.png" alt=""></a>
+			<p><b>!Bienvenido!</b></p>
+			<p><b>Citlalih</b></p>
           </div>
           <div class="top-nav s-12 l-10">
             <p class="nav-text"></p>
             <ul class="right chevron">
-              <li><a href="index.html">Inicio</a></li>
+              <li><a href="#inicio">Inicio</a></li>
 			  <li><a>Usuarios</a>
 					<ul>
                       <li><a href="#altaUsuarios" >Alta</a></li>
                       <li><a href="#actuaUsuarios">Mantenimiento</a></li>
                     </ul>
 			  </li>
-			  <li><a href="products.html">Fechas Gestión</a></li>
+			  <li><a href="#fechas">Fechas Gestión</a></li>
               <li><a href="products.html">Proyectos y Propuestas</a></li>
 			  
               <li><a>Formatos</a>
@@ -61,7 +63,7 @@
               </li>
               <li><a href="noticias.html">Noticias</a></li>
               <li><a href="contact.html">Contacto</a></li>
-			  <li><a href="index.html" class="background-primary">Cerrar Sesión</a></li>
+			  <li><a href="#iniciog" class="background-primary">Cerrar Sesión</a></li>
             </ul>
           </div>
         </div>
@@ -75,14 +77,34 @@
 			$("#altaUser" ).show();
 			$("#iniciodiv" ).hide();
 			$("#actuaUser" ).hide();
+			$("#fechasG" ).hide();
 		}); 
 		$('a[href="#actuaUsuarios"]').click(function(){
 			//alert('Sign new href executed.'); 
 			$("#actuaUser" ).show();
 			$("#iniciodiv" ).hide();
 			$("#altaUser" ).hide();
+			$("#fechasG" ).hide();
 		});
-
+		
+		$('a[href="#fechas"]').click(function(){
+			//alert('Sign new href executed.'); 
+			$("#fechasG" ).show();
+			$("#iniciodiv" ).hide();
+			$("#altaUser" ).hide();
+			$("#actuaUsuarios" ).hide();
+			$("#actuaUser" ).hide();
+		});
+		
+		$('a[href="#inicio"]').click(function(){
+			//alert('Sign new href executed.'); 
+			window.location = "indexjpi.html";
+		});
+		
+		$('a[href="#iniciog"]').click(function(){
+			//alert('Sign new href executed.'); 
+			window.location = "index.html";
+		});
 		
 		});
 	</script>
