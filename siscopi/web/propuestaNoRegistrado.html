@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SISCOPI Template</title>
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/icons.css">
+    <link rel="stylesheet" href="css/responsee.css">
+    <link rel="stylesheet" href="owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" href="owl-carousel/owl.theme.css">
+    <!-- CUSTOM STYLE -->
+    <link rel="stylesheet" href="css/template-style.css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/jquery.leanModal.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui-11.js"></script>
+	<script type="text/javascript" src="js/ui-datepicker-es-MX.js"></script>
+  </head> 
+  
+  <body class="size-1140">
+  
+    <!-- HEADER -->
+   <div id="header">
+      <!-- Content will be inserted by jQuery from header.html -->
+    </div>
+    
+    <!-- MAIN -->
+    <main role="main">
+      <!-- Content -->
+      <article>
+      <!--   <header class="section-small-padding background-primary ">-->
+            <h1 class="text-white margin-bottom-0 text-size-30 text-thin text-line-height-1 background-primary text-center">Registrar propuesta (usuarios no registrados)</h1>
+
+        <div class="section background-white">
+			  <div class="margin">
+				<form class="customform" action="">
+					<h2 class="text-primary margin-bottom-0 text-size-10 text-right">Fecha solicitud:</h2>
+					
+					<label id="fechahoy" class="margin-bottom-0 text-size-10 text-right"></label>
+					
+					<h2 class="text-secondary margin-bottom-0 text-size-10 text-center">Aspectos Generales</h2>
+					
+					<table>
+						<thead>
+							<tr>
+								<th class="text-center">Concepto</th>
+								<th class="text-center">Descripción</th>
+							</tr>
+						</thead>
+						<tbody>
+						<tr>
+							<td class="text-dark text-center">Nombre del proyecto</td>
+							<td><textarea rows="1" cols="20" maxlength="50" title="procurar redactar en términos comprensibles" placeholder="procurar redactar en términos comprensibles"></textarea></td>
+						</tr>
+						<tr>
+							<td class="text-dark text-center">Objetivo</td>
+							<td><textarea rows="4" cols="20" maxlength="200" title="medible, cuantificable y factible" placeholder="medible, cuantificable y factible"></textarea></td>
+						</tr>
+						<tr>
+							<td class="text-dark text-center">Entregables (máximo ?)</td>
+							<td>
+								<img id="imgaddentre" class="imge" src="img/mas.png" onclick="mostrar(this)"/>
+								<div id="entregable" style="display:none">
+									<textarea  id="nentregable" rows="1" cols="20" maxlength="50" title="procurar redactar en términos comprensibles" placeholder="procurar redactar en términos comprensibles"></textarea>
+									<img id="imgaddentreindividual" class="imgaddentreindividual" src="img/masv.png" onclick="mostrar(this)"/>
+								</div>
+								<div id="entregables" style="display:none">
+									<table id="tentregables">
+										<thead>
+											<tr>
+												<th class="text-center">No</th>
+												<th class="text-center">Entregable</th>
+											</tr>
+										<thead>
+										<tbody>
+										
+										</tbody>
+									</table>
+									
+								</div>
+							
+							</td>
+						</tr>
+						<tr>
+							<td class="text-dark text-center">Fechas programadas para el inicio y fin del proyecto</td>
+							<td>
+								<table>
+									<tr>
+										<td>Inicio</td>
+										<td>
+											<input id="ipropuesnr" class="required email border-radius text-l-size-16" type="text" />
+										</td>
+									</tr>
+									<tr>
+										<td>Fin</td>
+										<td>
+											<input id="fpropuesnr" class="required email border-radius text-l-size-16" type="text" />
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+						<tr>
+							<td class="text-dark text-center">Carreras/Ingenierias en las que impacta el proyecto (mínimo 1 y máximo ?)</td>
+							<td>
+								<table>
+									<tr>
+										<td>1</td>
+										<td><input name="c1" class="required name border-radius text-l-size-16" placeholder="" title="" type="text" /></td>
+									</tr>
+									<tr>
+										<td>2</td>
+										<td><input name="c1" class="required name border-radius text-l-size-16" placeholder="" title="" type="text" /></td>
+									</tr>
+									<tr>
+										<td>3</td>
+										<td><input name="c1" class="required name border-radius text-l-size-16" placeholder="" title="" type="text" /></td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+						<tr>
+							<td class="text-dark text-center">
+								Responsable(s) /asesor
+							</td>
+							<td>
+								<table>
+									<thead>
+										<tr>
+											<td>Nombre</td>
+											<td>cargo</td>
+											<td>teléfono</td>
+											<td>Email</td>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td> <input name="nombre" class="required email border-radius text-l-size-16" placeholder="" title="" type="text" /> </td>
+											<td><input name="nombre" class="required email border-radius text-l-size-16" placeholder="" title="" type="text" />  </td>
+											<td><input name="nombre" class="required email border-radius text-l-size-16" placeholder="" title="" type="text" />  </td>
+											<td><input name="nombre" class="required email border-radius text-l-size-16" placeholder="" title="" type="text" />  </td>
+										</tr>
+									</tbody>
+								</table>
+							</td>
+							
+						</tr>
+						<tr>
+							<td class="text-center">Adscripción</td>
+							<td><input name="nombre" class="required email border-radius text-l-size-12" placeholder="" title="" type="text" /></td>
+						</tr>
+						<tbody>
+					</table>
+					<h2 class="text-secondary margin-bottom-0 text-size-10 text-center">Detalle del proyecto</h2>  
+					<table>
+						<tr>
+							<td class="text-dark text-center" style="width:35%">Actividades a realizarse (mínimo ? y máximo ?)</td>
+							<td>
+								<img id="imgaddacti" class="imge" src="img/mas.png" onclick="mostrar(this)"/>
+								<div id="actividad" style="display:none">
+									<textarea  id="nactividad" rows="1" cols="20" maxlength="50" title="procurar redactar en términos comprensibles" placeholder="procurar redactar en términos comprensibles"></textarea>
+									<img id="imgaddactiindividual" class="imgaddactiindividual" src="img/masv.png" onclick="mostrar(this)"/>
+								</div>
+								<div id="actividades" style="display:none">
+									<table id="tactividades">
+										<thead>
+											<tr>
+												<th class="text-center">No</th>
+												<th class="text-center">Actividad</th>
+											</tr>
+										<thead>
+										<tbody>
+										
+										</tbody>
+									</table>
+									
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="text-dark text-center" style="width:35%">Alcance</td>
+							<td>
+								<textarea  id="alcance" rows="1" cols="20" maxlength="50" title="procurar redactar en términos comprensibles" placeholder="procurar redactar en términos comprensibles"></textarea>
+							</td>
+						</tr>
+						<tr>
+							<td class="text-dark text-center" style="width:35%">Observaciones</td>
+							<td>
+								<textarea  id="observaciones" rows="3" cols="20" maxlength="500" title="procurar redactar en términos comprensibles" placeholder="procurar redactar en términos comprensibles"></textarea>
+							</td>
+						</tr>
+					</table>
+					  <div class="s-12"><button class="submit-form button background-primary border-radius text-white" type="submit">Alta</button></div> 
+					</form>
+			</div>
+		
+          
+        </div> 
+      </article>
+    </main>
+    
+    <!--FOOTER -->
+	<div id="footer">
+      <!-- Content will be inserted by jQuery from footer.html -->
+    </div>
+    <script type="text/javascript" src="js/responsee.js"></script>
+    <script type="text/javascript" src="owl-carousel/owl.carousel.js"></script>
+    <script type="text/javascript" src="js/template-scripts.js"></script>
+     <script>
+		$(document).ready(function(){ 
+		 $( "#header" ).load( "header.html" );
+		 $( "#footer" ).load( "footer.html" );
+		 
+		$.datepicker.setDefaults($.datepicker.regional['es-MX']);
+		$("#ipropuesnr").datepicker();
+		$("#fpropuesnr").datepicker();
+		 var f = new Date();
+		 var fh= f.getDate()+"/"+(f.getMonth() +1)+"/"+f.getFullYear();
+		 
+		 document.getElementById("fechahoy").innerHTML = fh;
+		
+		$( document ).tooltip();
+			
+		
+		 
+			
+	
+		}); 
+		
+		function mostrar(obj){
+         if($(obj).attr('id') == 'imgaddentre')
+         {
+            $("#entregable" ).show();
+			$("#imgaddentre" ).hide();
+         }
+         if($(obj).attr('id') == 'imgaddentreindividual')
+         {
+			$('#entregables').show();
+			var entrega=$('#nentregable').val();
+			var numero=1;
+			$('#tentregables').append('<tr><td class="text-center">'+numero+'</td><td>'+entrega+'</td></tr>')
+			$('#nentregable').val("");
+			$('#nentregable').focus();
+         }
+		 if($(obj).attr('id') == 'imgaddacti')
+         {
+            $("#actividad" ).show();
+			$("#imgaddacti" ).hide();
+         }
+		 if($(obj).attr('id') == 'imgaddactiindividual')
+         {
+			$('#actividades').show();
+			var entrega=$('#nactividad').val();
+			var numero=1;
+			$('#tactividades').append('<tr><td class="text-center">'+numero+'</td><td>'+entrega+'</td></tr>')
+			$('#nactividad').val("");
+			$('#nactividad').focus();
+         }
+		}
+	</script>
+   </body>
+</html>

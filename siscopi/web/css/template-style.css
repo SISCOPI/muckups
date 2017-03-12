@@ -7,7 +7,7 @@ body {
 p {
   color: #777;
   font-size: 0.85rem;
-  line-height: 1.6rem;
+  line-height: 1.3rem;
 }
 a, a:link, a:visited, a:hover, a:active { 
 color: #777;
@@ -173,15 +173,16 @@ iframe {
 table {
 	background:none repeat scroll 0 0 #fff;
 	border:0;
-	font-size: 0.85rem;
+	font-size: 1.3rem;
   line-height: 1.6rem;
 	}
-table tr td, table tr th {padding:10px;}
+table tr td, table tr th {padding:6px;}
 table tfoot, table thead {
   background:none repeat scroll 0 0 #f5f5f5;
   border-top:1px solid #f0f0f0;
   border-bottom:1px solid #f0f0f0;
 }
+
 table tr:nth-of-type(2n) {
   background:none repeat scroll 0 0 #f5f5f5;
   border-top:1px solid #f0f0f0;
@@ -490,6 +491,11 @@ a.background-red{
   color: #002633 !important;
 } 
 
+.text-secondary{
+	 color: #2c3fa3 !important;
+	
+}
+
 /* Background Colors */
 .background-white, .primary-color-white .background-primary {
   background-color: #fff !important;
@@ -513,6 +519,11 @@ a.background-red{
   background: #f3f6fa;
   
   
+}
+
+.background-azulclaro{
+	background-color: #9ec0ed !important;
+	
 }
 /* Background Opacity */
 .background-white.background-transparent, .primary-color-white .background-primary.background-transparent {
@@ -669,7 +680,7 @@ a.background-red{
 
 /* Containers */
 .section  { 
-  padding: 6rem 1.25rem;
+  padding: 2.5rem 1.25rem;
 }
 .section-small-padding  { 
   padding: 2.5rem 1.25rem;
@@ -713,6 +724,9 @@ a.background-red{
 }
 .border-radius  { 
   border-radius: 3px;
+}
+.border-radius-fe  { 
+  border-radius: 5px;
 }
 .content-center-vertical {
   position: absolute;
@@ -1931,9 +1945,9 @@ img.btn_close {
 	margin: -28px -28px 0 0;
 }
 
-fieldset { 
+/*fieldset { 
 	border:none; 
-}
+}*/
 
 form.signin .textbox label { 
 	display:block; 
@@ -2039,7 +2053,7 @@ form.signin input::-webkit-input-placeholder { color:#bbb; text-shadow:0 0 2px #
     display: block;
 }
 
-.ui-dialog {
+/*.ui-dialog {
 	top: 0;
 	left: 0;
 	padding: .2em;
@@ -2102,7 +2116,7 @@ form.signin input::-webkit-input-placeholder { color:#bbb; text-shadow:0 0 2px #
     width: 150px;
     background: #F86379;
     
-}
+}*/
 
 
 
