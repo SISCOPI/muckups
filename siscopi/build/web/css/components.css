@@ -91,7 +91,7 @@ form.customform button {
  height: 2.7rem;
  padding: 0.625rem;
  cursor:pointer;
- width: 100%;
+ width: 40%;
  transition: background 0.20s linear 0s;
  -o-transition: background 0.20s linear 0s;
  -ms-transition: background 0.20s linear 0s;

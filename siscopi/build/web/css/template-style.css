@@ -327,7 +327,10 @@ nav {
   padding: 1.7rem 0;
   position: relative;
   z-index: 2;
-}  
+}
+.nav2 {
+  margin-right:7.5rem;	
+}   
 .top-nav ul ul {
   background: #002633 none repeat scroll 0 0;
 }

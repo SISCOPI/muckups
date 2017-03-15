@@ -1,5 +1,0 @@
-
-function masInfUser(){
-	alert("masInfUser");
-	
-}

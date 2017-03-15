@@ -1,0 +1,53 @@
+      <section class="section background-white" id="altaUser" > 
+          <h2 class="text-primary margin-bottom-0 text-size-30 text-thin text-line-height-1 text-center ">Solicitud de acceso</h2>
+		  
+        <div class="line" >
+		<span class="margin-bottom-5">Para tener acceso debe rellenar el siguiente formulario con los datos requeridos</span>
+          <div class="margin">
+            <form class="customform" action="">
+                  <div class="line">
+                    <div class="margin">
+                      <div class="s-10 m-12 l-4">
+						<label> Nombre(s):</label>
+                        <input name="nombre" class="required email border-radius text-l-size-16" placeholder="" title="" type="text" />
+                      </div>
+                      <div class="s-10 m-12 l-4">
+						<label> Apellido Paterno:</label>
+                        <input name="ap" class="required name border-radius text-l-size-16" placeholder="" title="" type="text" />
+                      </div>
+					   <div class="s-10 m-12 l-4">
+						<label> Apellido Materno:</label>
+                        <input name="am" class="required name border-radius text-l-size-16" placeholder="" title="" type="text" />
+                      </div>
+                    </div>
+                  </div>
+                  
+				  <div class="margin">
+				  <div class="s-12 l-6""> 
+					<label> Email:</label>
+                    <input name="email" class="required subject border-radius text-l-size-16" placeholder="" title="" type="text" />
+                  </div>
+				  <div class="s-12 m-12 l-4"> 
+					<label> Grado Acádemico:</label>
+                    <select name="grado" class="subject border-radius text-l-size-14" id="grado">
+						<option value="5">Lic</option>
+						<option value="4">Dr</option>
+						<option value="3">Ing</option>
+						<option value="2">Alumno</option>
+						<option value="2">Otro</option>
+					</select>
+                  </div>
+				  <div class="s-12 m-12 l-6" style="display:none" id="nocontrol">
+					<label> No Control:</label>
+                    <input name="nocontrol" class="required name border-radius text-l-size-16" placeholder="" title="" type="text" />
+                  </div>
+				 </div>
+                <div class="s-12 text-center">
+					<button class="border-radius text-white cancel-btn" type="button" onclick="salir()">Cancelar</button>
+					<button class="submit-form button background-primary border-radius text-white" type="submit">Solicitar acceso</button>
+						
+				</div> 
+                </form>
+        </div>
+		</div>
+      </section>

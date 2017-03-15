@@ -1,0 +1,109 @@
+
+
+    <!-- HEADER -->
+    <header role="banner">    
+      <!-- Top Bar -->
+      <div class="top-bar background-white">
+        <div class="line">
+          <div class="s-12 m-6 l-6">
+            <div class="top-bar-contact">
+              <p class="text-size-12">Contacto: 01800 siscopi | <a class="text-orange-hover" href="mailto:contact@sampledomain.com">contact@sampledomain.com</a></p>
+            </div>
+          </div>
+          <div class="s-12 m-6 l-6">
+            <div class="right">
+              <ul class="top-bar-social right">
+                <li><a href="/"><i class="icon-facebook_circle text-orange-hover"></i></a></li>
+                <li><a href="/"><i class="icon-twitter_circle text-orange-hover"></i></a> </li>
+                <li><a href="/"><i class="icon-google_plus_circle text-orange-hover"></i></a></li>
+                <li><a href="/"><i class="icon-instagram_circle text-orange-hover"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Top Navigation -->
+      <nav class="background-white background-primary-hightlight">
+		<div>
+			<a href="" align="center"><img src="img/footer-image.png" alt=""></a>
+		</div>
+        <div class="line">
+		
+          <div class="s-12 l-2">
+            <a href="index.html" class="logo"><img src="img/SISCOPI-logo.png" alt=""></a>
+			<p><b>!Bienvenido!</b></p>
+			<p><b>Sergio</b></p>
+          </div>
+          <div class="top-nav s-12 l-10">
+            <p class="nav-text"></p>
+            <ul class="right chevron">
+              <li><a href="#inicio">Inicio</a></li>
+			  <li><a href="#fechas">Perfil</a></li>
+			  <li><a>Proyectos</a>
+					<ul>
+                      <li><a href="#altaProyectos" >Alta</a></li>
+                      <li><a href="#seguimientoProyectos">Seguimiento</a></li>
+                    </ul>
+			  </li>
+			  
+
+			  
+              <li><a>Formatos</a>
+                <ul>
+                  <li><a>Preregistro</a>
+                    <ul>
+                      <li><a>Service 1 A</a></li>
+                      <li><a>Service 1 B</a></li>
+                    </ul>
+                  </li>
+                  <li><a>Etapa 1</a></li>
+				  <li><a>Etapa 2</a></li>
+				  <li><a>Etapa 3</a></li>
+                </ul>
+              </li>
+
+			  <li><a href="#iniciog" class="background-primary">Cerrar Sesión</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+	
+	<script type="text/javascript">
+	$(document).ready(function(){
+		$('a[href="#altaProyectos"]').click(function(){
+			//alert('Sign new href executed.'); 
+			$("#altaProyecto" ).load("altaProyecto.html");
+			$(".section" ).hide();
+			$("#altaProyecto" ).show();			
+		}); 
+		$('a[href="#actuaUsuarios"]').click(function(){
+			//alert('Sign new href executed.'); 
+			$("#actuaUser" ).show();
+			$("#iniciodiv" ).hide();
+			$("#altaUser" ).hide();
+			$("#fechasG" ).hide();
+		});
+		
+		$('a[href="#fechas"]').click(function(){
+			//alert('Sign new href executed.'); 
+			$("#fechasG" ).show();
+			$("#iniciodiv" ).hide();
+			$("#altaUser" ).hide();
+			$("#actuaUsuarios" ).hide();
+			$("#actuaUser" ).hide();
+		});
+		
+		$('a[href="#inicio"]').click(function(){
+			//alert('Sign new href executed.'); 
+			window.location = "indexjpi.html";
+		});
+		
+		$('a[href="#iniciog"]').click(function(){
+			//alert('Sign new href executed.'); 
+			window.location = "index.html";
+		});
+		
+		});
+	</script>

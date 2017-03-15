@@ -22,3 +22,9 @@ $(function () {
 	
 });
 
+function salir(){
+	$(".section" ).hide();
+	$("#fechasG" ).hide();
+	$("#iniciodiv" ).show();
+	
+}

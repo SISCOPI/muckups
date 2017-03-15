@@ -69,7 +69,13 @@
             </ul>
           </div>
         </div>
+        
+            <div class="right nav2">
+              <a href="#altaUsuario">Solicitar acceso (nuevo usuario)</a>
+            </div>
+         
       </nav>
+      
 	  
 	  <div id="loginmodal" style="display:none;" class="background-login">
 		<a href="#" class="close"><img src="img/close_pop.png" class="btn_close" title="Close Window" alt="Close" /></a>
@@ -98,26 +104,31 @@
 	
 	<script type="text/javascript">
 	$(function(){
-	  $('#loginform').submit(function(e){
-		var user=$('#username').val();
-		
-		if(user=="jpi" || user=="JPI"){
-			window.location.replace("indexjpi.html");
-		}
-		return false;
-	  });
+		$('#loginform').submit(function(e){
+			var user=$('#username').val();
+			
+			if(user=="jpi" || user=="JPI"){
+				window.location.replace("indexjpi.html");
+			}
+			if(user=="profesor" || user=="PROFESOR"){
+				window.location.replace("indexProfesor.html");
+			}
+			return false;
+		});
 	  
-	  $('#modaltrigger').leanModal({ top: 110, overlay: 0.45, closeButton: ".hidemodal" });
-
-	});
+		$('#modaltrigger').leanModal({ top: 110, overlay: 0.45, closeButton: ".hidemodal" });
 	
-	$(document).ready(function() {
-
-	$('a.close, #mask').live('click', function() { 
-	  $('#mask , .login-popup').fadeOut(300 , function() {
-		$('#mask').remove();  
-	}); 
-	return false;
-	});
-});
+		$('a[href="#altaUsuario"]').click(function(){
+			$("#content" ).load("altaUser.html");
+			$('.section').hide();
+			$("#content" ).show();
+		});
+	
+		$('a.close, #mask').live('click', function() { 
+			$('#mask , .login-popup').fadeOut(300 , function() {
+			$('#mask').remove();  
+		}); 
+		return false;
+		});
+	});	
 	</script>
