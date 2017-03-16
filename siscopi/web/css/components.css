@@ -75,23 +75,30 @@ form.customform input[type="file"] {
  padding: 0.4rem;
  width: 100%;
 }
+
 form.customform input[type="radio"], form.customform input[type="checkbox"] {
  margin-right: 0.625rem;
  width:auto;
  padding:0;
  height:auto;
+ background: #9bdd42 scroll 0 0;
+ 
 }
+form.customform input[type=checkbox]:checked + label{
+  color: #f00;
+  font-style: normal;
+} 
 form.customform option {padding: 0.625rem;}
 form.customform select[multiple="multiple"] {height: auto;}
 form.customform button {
- width: 100%;
- background: none repeat scroll 0 0 #152732;
+ width: 90%;
+ 
  border: 0 none;
  color: #fff;
  height: 2.7rem;
  padding: 0.625rem;
  cursor:pointer;
- width: 40%;
+ width: 30%;
  transition: background 0.20s linear 0s;
  -o-transition: background 0.20s linear 0s;
  -ms-transition: background 0.20s linear 0s;
@@ -181,6 +188,13 @@ a.tooltip-content.tooltip-bottom,.tooltip-content.tooltip-bottom {
   cursor: not-allowed!important;
   opacity: 0.2;
 }
+.prev-btn{
+	background: #093572 none repeat scroll 0 0;	
+}
+.cancel-btn{
+	background: #152732 none repeat scroll 0 0;	
+}
+	
 .button i {
   background: rgba(0, 0, 0, 0.1) none repeat scroll 0 0;
   border-radius: 27px;

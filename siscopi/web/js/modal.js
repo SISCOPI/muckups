@@ -4,7 +4,7 @@
  * Version: 1.0
  */
 
-document.addEventListener('click', function (e) {
+/*document.addEventListener('click', function (e) {
     e = e || window.event;
     var target = e.target || e.srcElement;
 
@@ -22,7 +22,7 @@ document.addEventListener('click', function (e) {
         var modal = document.querySelector('[class="modal open"]');
         modal.classList.remove('open');
     }
-}, false);
+}, false); */
 
 $(document).ready(function () {
 $('.img1c').click(function(){

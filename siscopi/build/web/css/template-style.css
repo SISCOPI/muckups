@@ -1218,7 +1218,7 @@ form.customform2 input, form.customform textarea, form.customform select {
   width: 100%;
 }
 form.customform input:hover, form.customform textarea:hover, form.customform select:hover, form.customform input:focus, form.customform textarea:focus, form.customform select:focus {
-  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+  background: #b0f995 scroll 0 0;
 }
 p.form-error {
   background-color: #DD442C;

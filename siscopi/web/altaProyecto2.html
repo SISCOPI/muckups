@@ -1,0 +1,130 @@
+<html>
+  <head>
+    <meta name="generator"
+    content="HTML Tidy for HTML5 (experimental) for Windows https://github.com/w3c/tidy-html5/tree/c63cc39" />
+    <title></title>
+	<script type="text/javascript" src="js/funcionesGenericas.js"></script>
+	<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+  </head>
+  <body>
+    <h1 class="text-white margin-bottom-0 text-size-30 text-thin text-line-height-1 background-primary text-center">Registrar proyecto</h1>
+    <div class="section background-white">
+      <div class="margin">
+        <form class="customform" action="">
+
+          
+		  <h2 class="text-secondary margin-bottom-0 text-size-10 text-center">DATOS DE LOS INTEGRANTES</h2>
+		  <div class="margin">
+		  <fieldset>
+			<legend>Alta integrante </legend>
+				 <div class="margin">
+                      <div class="s-10 m-12 l-4">
+						<label> Nombre(s):</label>
+                        <input id="nombre" class="required email border-radius text-l-size-14" placeholder="" title="" type="text" />
+                      </div>
+                      <div class="s-10 m-12 l-4">
+						<label> Apellido Paterno:</label>
+                        <input id="ap" class="required name border-radius text-l-size-14" placeholder="" title="" type="text" />
+                      </div>
+					   <div class="s-10 m-12 l-4">
+						<label> Apellido Materno:</label>
+                        <input id="am" class="required name border-radius text-l-size-14" placeholder="" title="" type="text" />
+                      </div>
+                </div>
+				<div class="margin">
+                      <div class="s-10 m-12 l-4">
+						<label> No control</label>
+                        <input id="ncontrol" class="required email border-radius text-l-size-14" placeholder="" title="" type="text" />
+                      </div>
+					  <div class="s-10 m-12 l-4">
+						<label>Email</label>
+                        <input id="correo" class="required email border-radius text-l-size-14" placeholder="" title="" type="text" />
+                      </div>
+                      <div class="s-10 m-12 l-4">
+						<label>asignatura</label>
+                        <select name="asignatura" class="subject border-radius text-l-size-14" id="asignatura">
+							<option value="5">Taller de Inv I- Profesor: Juan Díaz Díaz - Clave:ITT0005</option>
+							<option value="4">Taller de Inv I- Profesor: Juan Díaz Díaz Clave:ITT0006</option>
+							<option value="3">Taller de Inv II- Profesor: Juan Díaz Díaz Clave:ITT0008</option>
+							<option value="2">Taller de Inv III- Profesor: Juan Díaz Juarez Clave:ITT0009</option>
+							<option value="2">Formulación de proyectos- Profesor: Juan Díaz Salas Clave:ITT0010</option>
+						</select>
+                    </div>
+					<div class="text-right">
+							<input id="lider" class="border-radius text-l-size-14" type="radio" />
+							<label>¿Lider de proyecto?</label>
+							<button class="submit-form button background-primary border-radius text-white" type="button" id="agregaIntegrante">Agregar</button>
+					</div>
+                  </div>
+		  </fieldset>
+         </div>
+		<div class="margin2x ">  
+		<table id="tintegrantes">
+			<thead>
+				<tr>
+					<td>Nombre completo</td>
+					<td>No control</td>
+					<td>Correo</td>
+					<td>Asignatura</td>
+					<td>Lider</td>
+					
+				</tr>
+			</thead>
+			
+
+		</table>
+		</div>
+		<div class="s-12 text-center margin2x ">
+			<button class="border-radius text-white cancel-btn" type="button" onclick="salir()">Cancelar</button>
+			<button class="border-radius text-white prev-btn" type="button" onclick="siguiente(0)">Anterior</button>
+			<button class="submit-form button background-primary border-radius text-white" type="submit" onclick="siguiente(2)">Siguiente</button>
+		</div>
+        </form>
+      </div>
+	</div>
+	<script>
+		$(function() {
+		 //$("#fechahoy").innerHTML(fechaActual());
+		 document.getElementById("fechahoy").innerHTML = fechaActual();
+		 
+		 
+		 $('#otraa').change(function() {
+			 alert("otra");
+			if($(this).is(":checked")) {
+				//var returnVal = confirm("Are you sure?");
+				//$(this).attr("checked", returnVal);
+			$('#aimpactootra').prop('disabled', false);
+			}
+			else{
+				$('#aimpactootra').prop('disabled', true);
+			}
+			//$('#otraa').val($(this).is(':checked'));        
+			});
+			
+		$( "#agregaIntegrante" ).click(function() {
+			var nombre=$('#nombre').val();
+			var ap=$('#ap').val();
+			var am=$('#am').val();
+			var ncompleto=nombre +	ap	+am;
+			var ncontrol=$('#ncontrol').val();
+			var correo=$('#correo').val();
+			var asignatura=$('#asignatura').find(":selected").text();
+			
+			var lider = $('#lider').is(':checked') ? 1 : 0;
+			var blider="";
+			if(lider==1){
+			 blider="si"
+			}
+			var clave="";
+			
+			$('#tintegrantes').append('<tr><td class="text-center">'+ncompleto+'</td><td>'+ncontrol+'</td><td>'+correo+'</td><td>'+asignatura+'</td><td>'+blider+'</td></tr>')
+			$('#nentregable').val("");
+			$('#nentregable').focus();
+			
+		});
+		});
+		
+		
+	</script>
+  </body>
+</html>

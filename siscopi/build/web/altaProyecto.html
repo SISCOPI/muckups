@@ -11,215 +11,108 @@
     <div class="section background-white">
       <div class="margin">
         <form class="customform" action="">
-          <h2 class="text-primary margin-bottom-0 text-size-10 text-right">Fecha solicitud:</h2>
-          <label id="fechahoy" class="margin-bottom-0 text-size-10 text-right"></label>
-		  <div class="margin-bottom-0 text-size-10 text-right">
-			<h2 class="text-primary">Semestre:</h2>
-			<label id="" class="margin-bottom-0 text-size-10 text-right">Enero - Junio 2017 </label>
-		  </div>
-          <h2 class="text-secondary margin-bottom-0 text-size-10 text-center">Aspectos Generales</h2>
-          <table>
-            <thead>
-              <tr>
-                <th class="text-center">Concepto</th>
-                <th class="text-center">Descripción</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="text-dark text-center">Nombre del proyecto</td>
-                <td>
-                  <textarea rows="1" cols="20" maxlength="50" title="procurar redactar en términos comprensibles"
+          
+          
+		  <table class="">
+			<tr>
+				<td><h2 class="text-primary margin-bottom-0 text-size-10 text-right">Id:</h2></td>
+				<td><label id="id" class="margin-bottom-0 text-size-10 text-center">PREJ201700001</label></td>
+				<td><h2 class="text-primary margin-bottom-0 text-size-10 text-right">Fecha solicitud:</h2></td>
+				<td><label id="fechahoy" class="margin-bottom-0 text-size-10 text-center"></label></td>
+			
+				<td><h2 class="text-primary margin-bottom-0 text-size-10 text-right">Semestre:</h2></td>
+				<td><label id="" class="margin-bottom-0 text-size-10 text-center">Enero - Junio 2017 </label></td>
+			</tr>
+		  </table>
+          <h2 class="text-secondary margin-bottom-0 text-size-10 text-center">Datos Generales</h2>
+		  <div class="line">
+
+            <div class="s-10 m-12 l-12">
+				<label class="text-size-14">Título del proyecto (máximo 150 carácteres)</label>
+				<textarea rows="2" cols="20" maxlength="150" title="procurar redactar en términos comprensibles"
                   placeholder="procurar redactar en términos comprensibles"></textarea>
-                </td>
-              </tr>
-              <tr>
-                <td class="text-dark text-center">Objetivo</td>
-                <td>
-                  <textarea rows="4" cols="20" maxlength="200" title="medible, cuantificable y factible"
-                  placeholder="medible, cuantificable y factible"></textarea>
-                </td>
-              </tr>
-              <tr>
-                <td class="text-dark text-center">Entregables (mínimo 1)</td>
-                <td>
-                  <img id="imgaddentre" class="imge" src="img/mas.png" onclick="mostrar(this)" />
-                  <div id="entregable" style="display:none">
-                  <textarea id="nentregable" rows="1" cols="20" maxlength="50" title="procurar redactar en términos comprensibles"
-                  placeholder="procurar redactar en términos comprensibles"></textarea> 
-                  <img id="imgaddentreindividual" class="imgaddentreindividual" src="img/masv.png" onclick="mostrar(this)" /></div>
-                  <div id="entregables" style="display:none">
-                    <table id="tentregables">
-                      <thead>
-                        <tr>
-                          <th class="text-center">No</th>
-                          <th class="text-center">Entregable</th>
-                        </tr>
-                      </thead>
-                    </table>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td class="text-dark text-center">Fechas programadas para el inicio y fin del proyecto</td>
-                <td>
+           </div>
+				
+            <div class="s-10 m-12 l-12">
+                <label class="text-dark text-center">Áreas de impacto</label>
+                
+                  <table>
+					<tr>
+						<td><input type="checkbox" name="aimpacto" value="1" id="a1"/><label for="a1"> Educación</label></td>
+						<td><input type="checkbox" name="aimpacto" value="textil" id="a2"/> <label for="a2">Textil</label></td>
+						<td><input type="checkbox" name="aimpacto" value="biotecnologia" id="a3"/><label for="a3">Biotecnología</label></td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" name="aimpacto" value="agronomia" id="a4"/> <label for="a4">Agronomía</label></td>
+						<td><input type="checkbox" name="aimpacto" value="automotriz" id="a5"/><label for="a5"> Automotriz</label></td>
+						<td><input type="checkbox" name="aimpacto" value="bionica" id="a6" /> <label for="a6">Biónica</label></td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" name="aimpacto" value="ingenieria" id="a7" /><label for="a7">Ingeniería</label></td>
+						<td><input type="checkbox" name="aimpacto" value="quimica" id="a8"/><label for="a8">Química</label></td>
+						<td><input type="checkbox" name="aimpacto" value="biologia" id="a9"/><label for="a9">Biología</label></td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" name="aimpacto" value="fisica" id="a10"/><label for="a10">Física</label></td>
+						<td><input type="checkbox" name="aimpacto" value="alimentos" id="a11"/><label for="a11">Alimentos</label></td>
+						<td><input type="checkbox" name="aimpacto" value="medicina" id="a12"/><label for="a12">Medicina</label></td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" name="aimpacto" value="matematicas" id="a13"/><label for="a13">Matemáticas</label></td>
+						<td><input type="checkbox" name="aimpacto" value="ambiental" id="a14"/><label for="a14">Ambiental</label></td>
+						<td><input type="checkbox" name="aimpacto" value="otra" id="otraa"/><label for="otraa">Otra: </label><input id="aimpactootra" class="border-radius text-l-size-12" type="text" disabled="true"/></td>
+					</tr>
+				  </table>
+               </div>
+			  <div class="s-10 m-12 l-12">
+                <label class="text-dark text-center">Creador de proyecto</label>
+                <input name="creador" class="required email border-radius text-l-size-12" placeholder="" title="" type="text" />
+                
+              </div>
+			  <div class="s-10 m-12 l-12">
+                <label class="text-dark text-center">Duración</label>
                   <table>
                     <tr>
+                      <td>Tiempo (meses): 
+                      <input id="tiempop" class="required email border-radius text-l-size-16" type="text" /></td>
                       <td>Inicio: 
-                      <input id="ipropuesnr" class="required email border-radius text-l-size-16" type="text" /></td>
-                      <td>Fin: 
-                      <input id="fpropuesnr" class="required email border-radius text-l-size-16" type="text" /></td>
+                      <input id="finicio" class="required email border-radius text-l-size-16" type="text" /></td>
                     </tr>
                   </table>
-                </td>
-              </tr>
-              <tr>
-                <td class="text-dark text-center">Carreras/Ingenierias en las que impacta el proyecto (mínimo 1)</td>
-                <td>
-                  <table>
-                    <tr>
-                      <td>1</td>
-                      <td>
-                        <input name="c1" class="required name border-radius text-l-size-16" placeholder="" title="" type="text" />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>2</td>
-                      <td>
-                        <input name="c1" class="required name border-radius text-l-size-16" placeholder="" title="" type="text" />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>3</td>
-                      <td>
-                        <input name="c1" class="required name border-radius text-l-size-16" placeholder="" title="" type="text" />
-                      </td>
-                    </tr>
-                  </table>
-                </td>
-              </tr>
-              <tr>
-                <td class="text-dark text-center">Responsable(s) /asesor</td>
-                <td>
-                  <table>
-                    <thead>
-                      <tr>
-                        <td>Nombre</td>
-                        <td>cargo</td>
-                        <td>teléfono</td>
-                        <td>Email</td>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>
-                          <input name="nombre" class="required email border-radius text-l-size-16" placeholder="" title=""
-                          type="text" />
-                        </td>
-                        <td>
-                          <input name="nombre" class="required email border-radius text-l-size-16" placeholder="" title=""
-                          type="text" />
-                        </td>
-                        <td>
-                          <input name="nombre" class="required email border-radius text-l-size-16" placeholder="" title=""
-                          type="text" />
-                        </td>
-                        <td>
-                          <input name="nombre" class="required email border-radius text-l-size-16" placeholder="" title=""
-                          type="text" />
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </td>
-              </tr>
-              <tr>
-                <td class="text-dark text-center">Adscripción</td>
-                <td>
-                  <input name="nombre" class="required email border-radius text-l-size-12" placeholder="" title="" type="text" />
-                </td>
-              </tr>
-              <tr>
-                <td class="text-dark text-center">Datos del solicitante</td>
-                <td>
-                  <table>
-                    <thead>
-                      <tr>
-                        <td>Nombre</td>
-                        <td>teléfono</td>
-                        <td>Email</td>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>
-                          <input name="nombres" class="required email border-radius text-l-size-16" placeholder="" title=""
-                          type="text" />
-                        </td>
-                        <td>
-                          <input name="tels" class="required email border-radius text-l-size-16" placeholder="" title=""
-                          type="text" />
-                        </td>
-                        <td>
-                          <input name="mails" class="required email border-radius text-l-size-16" placeholder="" title=""
-                          type="text" />
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <h2 class="text-secondary margin-bottom-0 text-size-10 text-center">Detalle del proyecto</h2>
-          <table>
-            <tr>
-              <td class="text-dark text-center" style="width:35%">Actividades a realizar (mínimo 1)</td>
-              <td>
-                <img id="imgaddacti" class="imge" src="img/mas.png" onclick="mostrar(this)" />
-                <div id="actividad" style="display:none">
-                <textarea id="nactividad" rows="1" cols="20" maxlength="50" title="procurar redactar en términos comprensibles"
-                placeholder="procurar redactar en términos comprensibles"></textarea> 
-                <img id="imgaddactiindividual" class="imgaddactiindividual" src="img/masv.png" onclick="mostrar(this)" /></div>
-                <div id="actividades" style="display:none">
-                  <table id="tactividades">
-                    <thead>
-                      <tr>
-                        <th class="text-center">No</th>
-                        <th class="text-center">Actividad</th>
-                      </tr>
-                    </thead>
-                  </table>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td class="text-dark text-center" style="width:35%">Alcance</td>
-              <td>
-                <textarea id="alcance" rows="1" cols="20" maxlength="50" title="procurar redactar en términos comprensibles"
-                placeholder="procurar redactar en términos comprensibles"></textarea>
-              </td>
-            </tr>
-            <tr>
-              <td class="text-dark text-center" style="width:35%">Observaciones</td>
-              <td>
-                <textarea id="observaciones" rows="3" cols="20" maxlength="500"
-                title="procurar redactar en términos comprensibles"
-                placeholder="procurar redactar en términos comprensibles"></textarea>
-              </td>
-            </tr>
-          </table>
+               
+              </div>
+              
+          
+		  </div>
+		  
           <div class="s-12 text-center">
-          <button class="border-radius text-white cancel-btn" type="button" onclick="salir()">Cancelar</button> 
-          <button class="submit-form button background-primary border-radius text-white" type="submit">Alta</button></div>
+			  <button class="border-radius text-white cancel-btn" type="button" onclick="salir()">Cancelar</button> 
+			  <button class="submit-form button background-primary border-radius text-white" type="submit" id="siguiente1" onclick="siguiente(1)">Siguiente</button>
+		  </div>
         </form>
       </div>
-    </div>
+	</div>
 	<script>
 		$(function() {
 		 //$("#fechahoy").innerHTML(fechaActual());
 		 document.getElementById("fechahoy").innerHTML = fechaActual();
+		 
+		 
+		 $('#otraa').change(function() {
+		 alert("otra");
+        if($(this).is(":checked")) {
+            //var returnVal = confirm("Are you sure?");
+            //$(this).attr("checked", returnVal);
+		$('#aimpactootra').prop('disabled', false);
+        }
+		else{
+			$('#aimpactootra').prop('disabled', true);
+		}
+        //$('#otraa').val($(this).is(':checked'));        
+    });
 		});
+		
+		
 	</script>
   </body>
 </html>

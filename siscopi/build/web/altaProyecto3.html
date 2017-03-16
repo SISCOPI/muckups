@@ -1,0 +1,195 @@
+<html>
+  <head>
+    <meta name="generator"
+    content="HTML Tidy for HTML5 (experimental) for Windows https://github.com/w3c/tidy-html5/tree/c63cc39" />
+    <title></title>
+	<script type="text/javascript" src="js/funcionesGenericas.js"></script>
+	<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+  </head>
+  <body>
+    <h1 class="text-white margin-bottom-0 text-size-30 text-thin text-line-height-1 background-primary text-center">Registrar proyecto</h1>
+    <div class="section background-white">
+      <div class="margin">
+        <form class="customform" action="">  
+		  <h2 class="text-secondary margin-bottom-0 text-size-10 text-center">DATOS DE LA EMPRESA Y DEL RESPONSABLE O ASESOR PRINCIPAL</h2>
+		  <div class="margin">
+		  <fieldset>
+			<legend>Responsable</legend>
+				 <div class="margin">
+                      <div class="s-10 m-12 l-4">
+						<label> Nombre:</label>
+                        <input id="nombre" class="required email border-radius text-l-size-14" placeholder="" title="" type="text" />
+                      </div>
+                      <div class="s-10 m-12 l-4">
+						<label> Apellido Paterno:</label>
+                        <input id="ap" class="required name border-radius text-l-size-14" placeholder="" title="" type="text" />
+                      </div>
+					   <div class="s-10 m-12 l-4">
+						<label> Apellido Materno:</label>
+                        <input id="am" class="required name border-radius text-l-size-14" placeholder="" title="" type="text" />
+                      </div>
+                </div>
+				<div class="margin">
+					  <div class="s-10 m-12 l-4">
+						<label>Email</label>
+                        <input id="correo" class="required email border-radius text-l-size-14" placeholder="" title="" type="text" />
+                      </div>
+					  <div class="s-10 m-12 l-4">
+						<label> Teléfono</label>
+                        <input id="ncontrol" class="required email border-radius text-l-size-14" placeholder="" title="" type="text" />
+                      </div>
+					  <div class="s-10 m-12 l-2">
+						<label> Ext:</label>
+                        <input id="ncontrol" class="required email border-radius text-l-size-14" placeholder="" title="" type="text" />
+                      </div>
+					  <div class="s-10 m-12 l-4">
+						<label> Celular</label>
+                        <input id="ncontrol" class="required email border-radius text-l-size-14" placeholder="" title="" type="text" />
+                      </div>
+					  <div class="s-10 m-12 l-4">
+						<label> Puesto/Cargo</label>
+                        <input id="ncontrol" class="required email border-radius text-l-size-14" placeholder="" title="" type="text" />
+                      </div>
+                  </div>
+		  </fieldset>
+		  <fieldset>
+			<legend>Datos Empresa</legend>
+				 <div class="margin">
+                      <div class="s-10 m-12 l-10">
+						<label> Nombre:</label>
+                        <input id="nombre" class="required email border-radius text-l-size-14" placeholder="" title="" type="text" />
+                      </div>
+					  <fieldset>
+					  <legend> Sector</legend>
+					  <table>
+					<tr>
+						<td><input type="checkbox" name="aimpacto" value="1" id="a1"/><label for="a1"> Educación</label></td>
+						<td><input type="checkbox" name="aimpacto" value="textil" id="a2"/> <label for="a2">Textil</label></td>
+						<td><input type="checkbox" name="aimpacto" value="biotecnologia" id="a3"/><label for="a3">Biotecnología</label></td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" name="aimpacto" value="agronomia" id="a4"/> <label for="a4">Agronomía</label></td>
+						<td><input type="checkbox" name="aimpacto" value="automotriz" id="a5"/><label for="a5"> Automotriz</label></td>
+						<td><input type="checkbox" name="aimpacto" value="bionica" id="a6" /> <label for="a6">Biónica</label></td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" name="aimpacto" value="ingenieria" id="a7" /><label for="a7">Ingeniería</label></td>
+						<td><input type="checkbox" name="aimpacto" value="quimica" id="a8"/><label for="a8">Química</label></td>
+						<td><input type="checkbox" name="aimpacto" value="biologia" id="a9"/><label for="a9">Biología</label></td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" name="aimpacto" value="fisica" id="a10"/><label for="a10">Física</label></td>
+						<td><input type="checkbox" name="aimpacto" value="alimentos" id="a11"/><label for="a11">Alimentos</label></td>
+						<td><input type="checkbox" name="aimpacto" value="medicina" id="a12"/><label for="a12">Medicina</label></td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" name="aimpacto" value="matematicas" id="a13"/><label for="a13">Matemáticas</label></td>
+						<td><input type="checkbox" name="aimpacto" value="ambiental" id="a14"/><label for="a14">Ambiental</label></td>
+						<td><input type="checkbox" name="aimpacto" value="otra" id="otraa"/><label for="otraa">Otro: </label><input id="aimpactootra" class="border-radius text-l-size-12" type="text" disabled="true" maxlength="15"/></td>
+					</tr>
+				  </table>
+				  </fieldset>
+                </div>
+				<fieldset>
+					<legend>Dirección</legend>
+					<div class="margin">
+						  <div class="s-10 m-12 l-4">
+							<label>Calle</label>
+							<input id="correo" class="required email border-radius text-l-size-14" placeholder="" title="" type="text" />
+						  </div>
+						  <div class="s-10 m-12 l-2">
+							<label> No Ext</label>
+							<input id="ncontrol" class="required email border-radius text-l-size-14" placeholder="" title="" type="text" />
+						  </div>
+						  <div class="s-10 m-12 l-2">
+							<label> No Int</label>
+							<input id="ncontrol" class="required email border-radius text-l-size-14" placeholder="" title="" type="text" />
+						  </div>
+						  <div class="s-10 m-12 l-2">
+							<label> CP:</label>
+							<input id="ncontrol" class="required email border-radius text-l-size-14" placeholder="" title="" type="text" />
+						  </div>
+						  <div class="s-10 m-12 l-4">
+							<label> Colonia</label>
+							<select name="asignatura" class="subject border-radius text-l-size-14" id="asignatura">
+								<option value="5">Taller de Inv I- Profesor: Juan Díaz Díaz - Clave:ITT0005</option>
+								<option value="4">Taller de Inv I- Profesor: Juan Díaz Díaz Clave:ITT0006</option>
+								<option value="3">Taller de Inv II- Profesor: Juan Díaz Díaz Clave:ITT0008</option>
+								<option value="2">Taller de Inv III- Profesor: Juan Díaz Juarez Clave:ITT0009</option>
+								<option value="2">Formulación de proyectos- Profesor: Juan Díaz Salas Clave:ITT0010</option>
+							</select>
+						  </div>
+						  <div class="s-10 m-12 l-4">
+							<label> Estado</label>
+							<select name="asignatura" class="subject border-radius text-l-size-14" id="asignatura">
+								<option value="5">Taller de Inv I- Profesor: Juan Díaz Díaz - Clave:ITT0005</option>
+								<option value="4">Taller de Inv I- Profesor: Juan Díaz Díaz Clave:ITT0006</option>
+								<option value="3">Taller de Inv II- Profesor: Juan Díaz Díaz Clave:ITT0008</option>
+								<option value="2">Taller de Inv III- Profesor: Juan Díaz Juarez Clave:ITT0009</option>
+								<option value="2">Formulación de proyectos- Profesor: Juan Díaz Salas Clave:ITT0010</option>
+							</select>
+						  </div>
+						  <div class="s-10 m-12 l-2">
+							<label> Pais</label>
+							<input id="ncontrol" class="required email border-radius text-l-size-14" placeholder="" title="" type="text" value="México"/>
+						  </div>
+
+					  </div>
+					</fieldset>
+			  </fieldset>
+			 </div>
+
+		<div class="s-12 text-center margin2x ">
+			<button class="border-radius text-white cancel-btn" type="button" onclick="salir()">Cancelar</button>
+			<button class="border-radius text-white prev-btn" type="button" onclick="siguiente(1)">Anterior</button>
+			<button class="submit-form button background-primary border-radius text-white" type="submit" onclick="siguiente(4)">Siguiente</button>
+		</div>
+        </form>
+      </div>
+	</div>
+	<script>
+		$(function() {
+		 //$("#fechahoy").innerHTML(fechaActual());
+		 document.getElementById("fechahoy").innerHTML = fechaActual();
+		 
+		 
+		 $('#otraa').change(function() {
+			 alert("otra");
+			if($(this).is(":checked")) {
+				//var returnVal = confirm("Are you sure?");
+				//$(this).attr("checked", returnVal);
+			$('#aimpactootra').prop('disabled', false);
+			}
+			else{
+				$('#aimpactootra').prop('disabled', true);
+			}
+			//$('#otraa').val($(this).is(':checked'));        
+			});
+			
+		$( "#agregaIntegrante" ).click(function() {
+			var nombre=$('#nombre').val();
+			var ap=$('#ap').val();
+			var am=$('#am').val();
+			var ncompleto=nombre +	ap	+am;
+			var ncontrol=$('#ncontrol').val();
+			var correo=$('#correo').val();
+			var asignatura=$('#asignatura').find(":selected").text();
+			
+			var lider = $('#lider').is(':checked') ? 1 : 0;
+			var blider="";
+			if(lider==1){
+			 blider="si"
+			}
+			var clave="";
+			
+			$('#tintegrantes').append('<tr><td class="text-center">'+ncompleto+'</td><td>'+ncontrol+'</td><td>'+correo+'</td><td>'+asignatura+'</td><td>'+blider+'</td></tr>')
+			$('#nentregable').val("");
+			$('#nentregable').focus();
+			
+		});
+		});
+		
+		
+	</script>
+  </body>
+</html>
