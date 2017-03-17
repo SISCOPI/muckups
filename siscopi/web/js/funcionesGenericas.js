@@ -1,7 +1,14 @@
 
-function salir(){
+function salir(opcion){
+	if(opcion==1){
 	window.location = "index.html";
-	
+	}
+	if(opcion==2){
+	window.location = "indexjpi.html";
+	}
+	if(opcion==3){
+	window.location = "indexProfesor.html";
+	}
 }
 
 function fechaActual(){

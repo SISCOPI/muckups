@@ -75,7 +75,7 @@
 		</table>
 		</div>
 		<div class="s-12 text-center margin2x ">
-			<button class="border-radius text-white cancel-btn" type="button" onclick="salir()">Cancelar</button>
+			<button class="border-radius text-white cancel-btn" type="button" onclick="salir(3)">Cancelar</button>
 			<button class="border-radius text-white prev-btn" type="button" onclick="siguiente(0)">Anterior</button>
 			<button class="submit-form button background-primary border-radius text-white" type="submit" onclick="siguiente(2)">Siguiente</button>
 		</div>
@@ -85,7 +85,7 @@
 	<script>
 		$(function() {
 		 //$("#fechahoy").innerHTML(fechaActual());
-		 document.getElementById("fechahoy").innerHTML = fechaActual();
+		 
 		 
 		 
 		 $('#otraa').change(function() {
@@ -102,7 +102,8 @@
 			//$('#otraa').val($(this).is(':checked'));        
 			});
 			
-		$( "#agregaIntegrante" ).click(function() {
+		$( "#agregaIntegrante").click(function() {
+			
 			var nombre=$('#nombre').val();
 			var ap=$('#ap').val();
 			var am=$('#am').val();
