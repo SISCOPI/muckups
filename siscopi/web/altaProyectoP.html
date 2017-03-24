@@ -1,0 +1,137 @@
+<html>
+  <head>
+    <meta name="generator"
+    content="HTML Tidy for HTML5 (experimental) for Windows https://github.com/w3c/tidy-html5/tree/c63cc39" />
+    <title></title>
+	<script type="text/javascript" src="js/funcionesGenericas.js"></script>
+	<script type="text/javascript" src="js/jquery-3.2.0.js"></script>
+	<script src="js/jquery-ui.js"></script>
+	
+	<link href="css/jquery-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <h1 class="text-white margin-bottom-0 text-size-30 text-thin text-line-height-1 background-primary text-center">Propuestas activas</h1>
+    <div class="section background-white" id="altaProyecto5">
+      <div class="margin">
+		
+        <form class="customform" action="">
+		<div class="line">
+            <div class="margin text-center">
+              <div class="s-12 m-12 l-4 margin-bottom">
+                <div class="padding-2x block-bordered border-radius">
+                  <i class="icon-paperplane_ico icon2x text-primary margin-bottom-30"></i>
+                  <h2 class="text-thin">Casa Domótica</h2>
+                  <p class="margin-bottom-10">Resumen: Propuesta para realizar diseño de casa domótica....</p>
+				  <p class="margin-bottom-10">Responsable/Creador: JJRA</p>
+				  <input type="radio" name="selectPropuesta" id="r1" value="Casa Domótica"> <label class="text-primary text-strong">Seleccionar</label>
+                  
+                </div>
+              </div>
+              <div class="s-12 m-12 l-4 margin-bottom">
+                <div class="padding-2x block-bordered border-radius">
+                  <i class="icon-display_screen icon2x text-primary margin-bottom-30"></i>
+                  <h2 class="text-thin">Sistema Automático de Enfriamiento</h2>
+                  <p class="margin-bottom-10">Resumen: Sistema para automatizar el enfriamiento de cualquier aparato electrónico</p
+				  <p class="margin-bottom-10">Responsable/Creador: JJRA</p>
+                  <input type="radio" name="selectPropuesta" id="r2" value="Sistema Automático de Enfriamiento"> <label class="text-primary text-strong">Seleccionar</label>
+                </div>
+              </div>
+              <div class="s-12 m-12 l-4 margin-bottom">
+                <div class="padding-2x block-bordered border-radius">
+                  <i class="icon-heart icon2x text-primary margin-bottom-30"></i>
+                  <h2 class="text-thin">Calentador solar Sustentable</h2>
+                  <p class="margin-bottom-10">Resumen: Constuir calentador solar sustentable para ayuda al medio ambiente</p>
+                  <p class="margin-bottom-10">Responsable/Creador: JJRA</p>
+				  <input type="radio" name="selectPropuesta" id="r3" value="Calentador solar Sustentable"> <label class="text-primary text-strong">Seleccionar</label>
+                </div>
+              </div>
+              <div class="s-12 m-12 l-4 margin-bottom">
+                <div class="padding-2x block-bordered border-radius">
+                  <i class="icon-attachment icon2x text-primary margin-bottom-30"></i>
+                  <h2 class="text-thin">Useful</h2>
+                  <p class="margin-bottom-30">Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis</p>
+                  <input type="radio" name="selectPropuesta" id="r4" value="Useful"> <label class="text-primary text-strong">Seleccionar</label>
+                </div>
+              </div>
+              <div class="s-12 m-12 l-4 margin-bottom">
+                <div class="padding-2x block-bordered border-radius">
+                  <i class="icon-reorder icon2x text-primary margin-bottom-30"></i>
+                  <h2 class="text-thin">Responsive navigation</h2>
+                  <p class="margin-bottom-30">Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis</p>
+                  <input type="radio" name="selectPropuesta" id="r5" value="Responsive navigation"> <label class="text-primary text-strong">Seleccionar</label>
+                </div>
+              </div>
+              <div class="s-12 m-12 l-4">
+                <div class="padding-2x block-bordered border-radius">
+                  <i class="icon-mail icon2x text-primary margin-bottom-30"></i>
+                  <h2 class="text-thin">Responsive components</h2>
+                  <p class="margin-bottom-30">Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis</p>
+                  <input type="radio" name="selectPropuesta" id="r6" value="Responsive components"> <label class="text-primary text-strong">Seleccionar</label>
+                </div>
+              </div>
+            </div>
+          </div>
+		  <div class="s-12 text-center margin2x ">
+			<button class="border-radius text-white cancel-btn" type="button" onclick="salir(3)">Cancelar</button>
+			
+			<button class="submit-form button background-primary border-radius text-white" type="submit" onclick="valida()">Siguiente</button>
+		</div>
+		  
+        </form>
+      </div>
+	</div>
+	<div id="dialog-confirm" title="¿seleccionar propuesta?" style="display:none">
+		<p><span class="ui-icon ui-icon-alert" style="float:left; margin:12px 12px 20px 0;" id="dialogotitulo"></span>Se ligará la propuesta seleccionada a su proyecto. Si su proyecto no es aprobado se liberará la misma para que pueda ser tomada por otro proyecto.</p>
+	</div>
+	<script>
+	$(document).ready(function(){
+		
+	
+	$( "#dialog-confirm" ).dialog({
+      autoOpen:false,
+	  resizable: true,
+      height: "auto",
+      width: 400,
+      modal: true,
+      buttons: {
+        "Aceptar": function() {
+			$( "#dialog-confirm" ).dialog( "close" );
+			var titulo=$("input[name='selectPropuesta']:checked").val();
+			siguiente2(0,titulo);
+        },
+        Cancel: function() {
+          $( this ).dialog( "close" );
+        }
+      }
+    });
+	
+	});
+		
+	function valida(){
+	event.preventDefault(); 
+	console.log("valida");
+	if (!$("input[name='selectPropuesta']:checked").val()) {
+		alert('Seleccione una propuesta');
+	}
+	else {
+	
+	var titulo=$("input[name='selectPropuesta']:checked").val();
+	var titulo0=$("#dialogotitulo").text();
+	var titulofinal=titulo0+titulo;
+	console.log(titulo);
+	console.log(titulo0);
+	console.log(titulofinal);
+	//$('#dialogotitulo').text(titulofinal);
+	$( "#dialog-confirm" ).dialog( "open" );
+	}
+	
+	}
+	function siguiente2(opcion, titulo){
+	if(parseInt(opcion)==0){
+	$("#altaProyecto").load("altaProyecto.html");
+	$("#titulo").val(titulo);
+	}
+}
+	</script>
+  </body>
+</html>

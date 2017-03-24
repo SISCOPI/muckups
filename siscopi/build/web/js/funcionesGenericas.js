@@ -18,7 +18,11 @@ function fechaActual(){
 }
 
 function siguiente(opcion){
+	
 	event.preventDefault(); 
+	if(parseInt(opcion)==6){
+	$("#altaProyecto" ).load("altaProyectoP.html");	
+	}
 	if(parseInt(opcion)==0){
 	$("#altaProyecto").load("altaProyecto.html");
 	}
@@ -38,6 +42,13 @@ function siguiente(opcion){
 	$("#altaProyecto" ).load("altaProyecto5.html");	
 	}
 	
+}
+
+function siguiente2(opcion, titulo){
+	if(parseInt(opcion)==0){
+	$("#altaProyecto").load("altaProyecto.html");
+	$("#titulo").val(titulo);
+	}
 }
 
 

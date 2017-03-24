@@ -3,7 +3,7 @@
     <meta name="generator"
     content="HTML Tidy for HTML5 (experimental) for Windows https://github.com/w3c/tidy-html5/tree/c63cc39" />
     <title></title>
-	
+	<script type="text/javascript" src="js/funcionesGenericas.js"></script>
 	<script type="text/javascript" src="js/jquery-3.2.0.js"></script>
   </head>
   <body>
@@ -52,45 +52,48 @@
                       </div>
                   </div>
 		  </fieldset>
+		  <div class="margin">
 		  <fieldset>
 			<legend>Datos Empresa</legend>
-				 <div class="margin">
-                      <div class="s-10 m-12 l-10">
-						<label> Nombre:</label>
-                        <input id="nombre" class="required email border-radius text-l-size-14" placeholder="" title="" type="text" />
-                      </div>
-					  <fieldset>
-					  <legend> Sector</legend>
-					  <table>
-					<tr>
-						<td><input type="checkbox" name="aimpacto" value="1" id="a1"/><label for="a1"> Educación</label></td>
-						<td><input type="checkbox" name="aimpacto" value="textil" id="a2"/> <label for="a2">Textil</label></td>
-						<td><input type="checkbox" name="aimpacto" value="biotecnologia" id="a3"/><label for="a3">Biotecnología</label></td>
-					</tr>
-					<tr>
-						<td><input type="checkbox" name="aimpacto" value="agronomia" id="a4"/> <label for="a4">Agronomía</label></td>
-						<td><input type="checkbox" name="aimpacto" value="automotriz" id="a5"/><label for="a5"> Automotriz</label></td>
-						<td><input type="checkbox" name="aimpacto" value="bionica" id="a6" /> <label for="a6">Biónica</label></td>
-					</tr>
-					<tr>
-						<td><input type="checkbox" name="aimpacto" value="ingenieria" id="a7" /><label for="a7">Ingeniería</label></td>
-						<td><input type="checkbox" name="aimpacto" value="quimica" id="a8"/><label for="a8">Química</label></td>
-						<td><input type="checkbox" name="aimpacto" value="biologia" id="a9"/><label for="a9">Biología</label></td>
-					</tr>
-					<tr>
-						<td><input type="checkbox" name="aimpacto" value="fisica" id="a10"/><label for="a10">Física</label></td>
-						<td><input type="checkbox" name="aimpacto" value="alimentos" id="a11"/><label for="a11">Alimentos</label></td>
-						<td><input type="checkbox" name="aimpacto" value="medicina" id="a12"/><label for="a12">Medicina</label></td>
-					</tr>
-					<tr>
-						<td><input type="checkbox" name="aimpacto" value="matematicas" id="a13"/><label for="a13">Matemáticas</label></td>
-						<td><input type="checkbox" name="aimpacto" value="ambiental" id="a14"/><label for="a14">Ambiental</label></td>
-						<td><input type="checkbox" name="aimpacto" value="otra" id="otraa"/><label for="otraa">Otro: </label><input id="aimpactootra" class="border-radius text-l-size-12" type="text" disabled="true" maxlength="15"/></td>
-					</tr>
-				  </table>
-				  </fieldset>
+				
+                <div class="s-10 m-12 l-6">
+					<label> Nombre:</label>
+                    <input id="nombre" class="required email border-radius text-l-size-14" placeholder="" title="" type="text" />
                 </div>
-				<fieldset>
+				<div class="s-10 m-12 l-12">
+					<label>Sector </label>
+					
+					  <table>
+						<tr>
+							<td><input type="checkbox" name="aimpacto" value="1" id="a1"/><label for="a1"> Educación</label></td>
+							<td><input type="checkbox" name="aimpacto" value="textil" id="a2"/> <label for="a2">Textil</label></td>
+							<td><input type="checkbox" name="aimpacto" value="biotecnologia" id="a3"/><label for="a3">Biotecnología</label></td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" name="aimpacto" value="agronomia" id="a4"/> <label for="a4">Agronomía</label></td>
+							<td><input type="checkbox" name="aimpacto" value="automotriz" id="a5"/><label for="a5"> Automotriz</label></td>
+							<td><input type="checkbox" name="aimpacto" value="bionica" id="a6" /> <label for="a6">Biónica</label></td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" name="aimpacto" value="ingenieria" id="a7" /><label for="a7">Ingeniería</label></td>
+							<td><input type="checkbox" name="aimpacto" value="quimica" id="a8"/><label for="a8">Química</label></td>
+							<td><input type="checkbox" name="aimpacto" value="biologia" id="a9"/><label for="a9">Biología</label></td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" name="aimpacto" value="fisica" id="a10"/><label for="a10">Física</label></td>
+							<td><input type="checkbox" name="aimpacto" value="alimentos" id="a11"/><label for="a11">Alimentos</label></td>
+							<td><input type="checkbox" name="aimpacto" value="medicina" id="a12"/><label for="a12">Medicina</label></td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" name="aimpacto" value="matematicas" id="a13"/><label for="a13">Matemáticas</label></td>
+							<td><input type="checkbox" name="aimpacto" value="ambiental" id="a14"/><label for="a14">Ambiental</label></td>
+							<td><input type="checkbox" name="aimpacto" value="otra" id="otraa"/><label for="otraa">Otro: </label><input id="aimpactootra" class="border-radius text-l-size-12" type="text" disabled="true" maxlength="15"/></td>
+						</tr>
+				  </table>
+				</div>
+            </fieldset>  
+			</div>
+			<fieldset>
 					<legend>Dirección</legend>
 					<div class="margin">
 						  <div class="s-10 m-12 l-4">
