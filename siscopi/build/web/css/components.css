@@ -49,7 +49,7 @@ a.tab-label:hover,a.tab-label.active-btn {
 form.customform input, form.customform select, form.customform textarea, form.customform button {
  font-size:0.9rem;
  font-family:inherit;
- margin-bottom:1.25rem;
+ margin-bottom:0.25rem;
 } 
 form.customform input, form.customform select {height: 2.3rem;}
 form.customform input, form.customform textarea, form.customform select { 

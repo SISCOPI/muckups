@@ -169,13 +169,13 @@ iframe {
   padding-top: 5px;
 }
 
-/* Tables */
+/* Tables 
 table {
 	background:none repeat scroll 0 0 #fff;
-	border:0;
 	font-size: 1.3rem;
-  line-height: 1.6rem;
-	}
+	line-height: 1.6rem;
+	border: 1px solid #a0f3b1
+	}*/
 table tr td, table tr th {padding:6px;}
 table tfoot, table thead {
   background:none repeat scroll 0 0 #f5f5f5;
@@ -1203,11 +1203,12 @@ a.tab-label, a.tab-label:link, a.tab-label:visited, a.tab-label:hover,
 }
 
 /* Forms */
+/*padding: 0.625rem;*/
 form.customform input, form.customform textarea, form.customform select {
   background: rgba(0, 0, 0, 0.03) none repeat scroll 0 0;
   border: 1px solid rgba(0, 0, 0, 0.14);
   font-size: 12px;
-  padding: 0.625rem;
+  
   width: 100%;
 }
 form.customform2 input, form.customform textarea, form.customform select {
@@ -2055,7 +2056,12 @@ form.signin input::-webkit-input-placeholder { color:#bbb; text-shadow:0 0 2px #
 .open {
     display: block;
 }
-
+.borderTable{
+    border: 1px solid #0b74a8
+}
+.tdfondoazul{
+    background: #a0f3b1
+}
 /*.ui-dialog {
 	top: 0;
 	left: 0;
@@ -2121,5 +2127,31 @@ form.signin input::-webkit-input-placeholder { color:#bbb; text-shadow:0 0 2px #
     
 }*/
 
+.LegendCenter
+{
+    border: medium none;
+    margin: 0 auto;
+    padding: 0 10px;
+    position: relative;
+    text-align: center;
+    width: auto;
+    color: #3C6EAC;
+    
+}
+.labelpadding{
+	padding: 0.625rem;
+	margin-bottom:0.25rem;
 
+}
+.tranchoeval1{
+	width: 20%;
 
+}
+.tranchoeval2{
+	width: 80%;
+
+}
+.tranchoeval3{
+	width: 30px;
+
+}

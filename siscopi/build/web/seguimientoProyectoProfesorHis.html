@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <meta name="generator"
+    content="HTML Tidy for HTML5 (experimental) for Windows https://github.com/w3c/tidy-html5/tree/c63cc39" />
+    <title></title>
+	<script type="text/javascript" src="js/funcionesGenericas.js"></script>
+	<script type="text/javascript" src="js/jquery-3.2.0.js"></script>
+  </head>
+  <body>
+    <h1 class="text-white margin-bottom-0 text-size-30 text-thin text-line-height-1 background-primary text-center">Histórico de proyectos</h1>
+    <div class="section background-white" id="altaProyecto5">
+      <div class="margin">
+		<h2 class="text-primary">¿Desde Banco de propuestas?</h2>	
+        <form class="customform" action="">
+		<div class="line">
+		  <table class="">
+			<tr>
+				
+				<td class="text-center"><input type="radio" name="selectpro" value="1" id="r1"/><label for="r1">Si</label></td>
+				<td class="text-center"><input type="radio" name="selectpro" value="1" id="r2"/><label for="r2">No</label></td>
+			</tr>
+		  </table>
+         </div>
+
+		<div class="s-12 text-center">
+			<button class="border-radius text-white cancel-btn" type="button" onclick="salir(3)">Salir</button>
+			<button class="submit-form button background-primary border-radius text-white" type="submit" id="siguiente0" onclick="siguienteAntes()">Siguiente</button>
+		</div>
+        </form>
+      </div>
+	</div>
+	<script>
+	function siguienteAntes(){
+		if($('#r2').is(':checked')) {
+			siguiente(0);
+		}
+		if($('#r1').is(':checked')) {
+			siguiente(6);
+		}
+		else{
+			alert("no disp");
+		}
+	}	
+		
+		
+	</script>
+  </body>
+</html>

@@ -43,7 +43,8 @@
 			  <li><a>Proyectos</a>
 					<ul>
                       <li><a href="#altaProyectos" >Alta</a></li>
-                      <li><a href="#seguimientoProyectos">Seguimiento</a></li>
+                      <li><a href="#seguimientoProyectosAct">Seguimiento</a></li>
+					  <li><a href="#seguimientoProyectosHis">Histórico</a></li>
                     </ul>
 			  </li>
 			  
@@ -103,6 +104,18 @@
 		$('a[href="#iniciog"]').click(function(){
 			//alert('Sign new href executed.'); 
 			window.location = "index.html";
+		});
+		
+		$('a[href="#seguimientoProyectosAct"]').click(function(){
+			$("#altaProyecto" ).load("seguimientoProyectoProfesorAct.html");
+			$(".section" ).hide();
+			$("#altaProyecto" ).show();			
+		}); 
+		
+		$('a[href="#seguimientoProyectosHis"]').click(function(){
+			$("#altaProyecto" ).load("seguimientoProyectoProfesorHis.html");
+			$(".section" ).hide();
+			$("#altaProyecto" ).show();			
 		});
 		
 		});
