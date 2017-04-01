@@ -2057,10 +2057,16 @@ form.signin input::-webkit-input-placeholder { color:#bbb; text-shadow:0 0 2px #
     display: block;
 }
 .borderTable{
-    border: 1px solid #0b74a8
+    border: 1px solid #0b74a8;
+	border-collapse:separate;
+	border-spacing:2px;
 }
+
 .tdfondoazul{
     background: #a0f3b1
+}
+.lightblue {
+	background: lightblue;;
 }
 /*.ui-dialog {
 	top: 0;
@@ -2154,4 +2160,9 @@ form.signin input::-webkit-input-placeholder { color:#bbb; text-shadow:0 0 2px #
 .tranchoeval3{
 	width: 30px;
 
+}
+.scrollhorario{
+	overflow: scroll;
+	height:200px;
+	
 }

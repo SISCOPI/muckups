@@ -45,7 +45,13 @@
                       <li><a href="#actuaUsuarios">Mantenimiento</a></li>
                     </ul>
 			  </li>
-			  <li><a href="#fechas">Fechas Gestión</a></li>
+			  
+			  <li><a>Gestión Actual</a>
+					<ul>
+                      <li><a href="#fechas" >Fechas</a></li>
+                      <li><a href="#asignaturas">Carga de Asignaturas</a></li>
+                    </ul>
+			  </li>
               <li><a>Proyectos y Propuestas</a>
 					<ul>
                       <li><a href="#altaUsuarios" >Proyectos</a></li>
@@ -108,6 +114,13 @@
 		$('a[href="#iniciog"]').click(function(){
 			//alert('Sign new href executed.'); 
 			window.location = "index.html";
+		});
+		
+		$('a[href="#asignaturas"]').click(function(){
+			//alert('Sign new href executed.'); 
+			$(".section" ).hide();
+			$("#dinamico").load("cargaAsignaturas.html")
+			$("#dinamico").show();
 		});
 		
 		});

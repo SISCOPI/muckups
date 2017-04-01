@@ -1,0 +1,159 @@
+<html>
+  <head>
+    <meta name="generator"
+    content="HTML Tidy for HTML5 (experimental) for Windows https://github.com/w3c/tidy-html5/tree/c63cc39" />
+    <title></title>
+	<script type="text/javascript" src="js/funcionesGenericas.js"></script>
+	<script type="text/javascript" src="js/jquery-3.2.0.js"></script>
+  </head>
+  <body>
+    <h1 class="text-white margin-bottom-0 text-size-30 text-thin text-line-height-1 background-primary text-center">Cargar Asignaturas</h1>
+    
+	<div class="section background-white" id="altaAsignatura">
+		<table class="borderTable">
+			<tr>
+				<td><h2 class="text-primary margin-bottom-0 text-s-size-12 text-center">Fecha:</h2></td>
+				<td class="text-center"><label id="fechahoy" class="text-size-16 text-secondary"></label></td>
+				<td><h2 class="text-primary margin-bottom-0 text-s-size-12 text-center">Semestre:</h2></td>
+				<td class="text-center"><label id="" class="text-size-16 text-secondary">Enero - Junio 2017 </label></td>
+			</tr>
+		</table>
+      <div class="margin">
+        <form class="customform" action="">
+
+          
+		  <h2 class="text-secondary margin-bottom-0 text-size-10 text-center">Datos asignatura</h2>
+		 
+			<div class="margin">
+            <div class="s-10 m-12 l-2">
+				<label class="text-size-14">Clave</label>
+				<input type="text" title="" class="required"/>
+           </div>
+		   <div class="s-10 m-12 l-6">
+				<label class="text-size-14">Asignatura</label>
+				<input type="text" title="" class="required"/>
+           </div>
+           <div class="s-10 m-12 l-4">
+				<label class="text-size-14">Grupo</label>
+				<input type="text" title="" class="required"/>
+           </div>
+ 
+			
+         </div>
+		 <h2 class="text-secondary margin-bottom-0 text-size-10 text-center">Profesor</h2>
+		 <div class="margin" id="datosProfesor">
+			 <div class="s-10 m-12 l-4">
+				<label> Nombre(s):</label>
+                <input name="nombre" class="required email border-radius text-l-size-16" placeholder="" title="" type="text" />
+             </div>
+             <div class="s-10 m-12 l-4">
+				<label> Apellido Paterno:</label>
+                <input name="ap" class="required name border-radius text-l-size-16" placeholder="" title="" type="text" />
+             </div>
+		     <div class="s-10 m-12 l-4">
+				<label> Apellido Materno:</label>
+                <input name="am" class="required name border-radius text-l-size-16" placeholder="" title="" type="text" />
+             </div>
+			 <div class="right">
+				<a href="#evaluar"><img src="img/lupa.png" alt="mas"></a>
+			 </div>
+         </div>
+		 
+		 <div class="margin" id="existeProfesor" style="display:none">
+			
+		 </div>
+		 <div class="margin" style="display:none" id="nuevoProfesor">
+			 <div class="s-10 m-12 l-4">
+				<label> Nombre(s):</label>
+                <input name="nombre" class="required email border-radius text-l-size-16" placeholder="" title="" type="text" />
+             </div>
+             <div class="s-10 m-12 l-4">
+				<label> Apellido Paterno:</label>
+                <input name="ap" class="required name border-radius text-l-size-16" placeholder="" title="" type="text" />
+             </div>
+		     <div class="s-10 m-12 l-4">
+				<label> Apellido Materno:</label>
+                <input name="am" class="required name border-radius text-l-size-16" placeholder="" title="" type="text" />
+             </div>
+         </div>
+		
+		 
+		 <h2 class="text-secondary margin-bottom-0 text-size-10 text-center">Horario</h2>
+		 <div class="margin">
+			<table id="thorario" class="borderTable ">
+				<thead class="lightblue">
+					<tr>
+						<th></th>
+						<th>Lun</th>
+						<th>Mar</th>
+						<th>Mie</th>
+						<th>Jue</th>
+						<th>Vie</th>
+						<th>Sab</th>
+					</tr>
+				</thead>
+				<tbody>
+				
+				</tbody>
+
+			</table>
+		 
+		 </div>
+	
+		<div class="s-12 text-center margin2x ">
+			<button class="border-radius text-white cancel-btn" type="button" onclick="salir(3)">Cancelar</button>
+			
+			<button class="submit-form button background-primary border-radius text-white" type="submit" onclick="siguiente(4)">Alta</button>
+		</div>
+        </form>
+      </div>
+	</div>
+	<script>
+	
+	cargaHoras();
+		$(function() {
+		 $("#fechahoy").text(fechaActual());
+		cargaHoras();
+		 $("table").fixMe();
+		 
+
+			
+	
+		});
+		
+		;(function($) {
+   $.fn.fixMe = function() {
+      return this.each(function() {
+         var $this = $(this),
+            $t_fixed;
+         function init() {
+            $this.wrap('<div class="container" />');
+            $t_fixed = $this.clone();
+            $t_fixed.find("tbody").remove().end().addClass("fixed").insertBefore($this);
+            resizeFixed();
+         }
+         function resizeFixed() {
+            $t_fixed.find("th").each(function(index) {
+               $(this).css("width",$this.find("th").eq(index).outerWidth()+"px");
+            });
+         }
+         function scrollFixed() {
+            var offset = $(this).scrollTop(),
+            tableOffsetTop = $this.offset().top,
+            tableOffsetBottom = tableOffsetTop + $this.height() - $this.find("thead").height();
+            if(offset < tableOffsetTop || offset > tableOffsetBottom)
+               $t_fixed.hide();
+            else if(offset >= tableOffsetTop && offset <= tableOffsetBottom && $t_fixed.is(":hidden"))
+               $t_fixed.show();
+         }
+         $(window).resize(resizeFixed);
+         $(window).scroll(scrollFixed);
+         init();
+      });
+   };
+})(jQuery);
+		
+		
+	</script>
+  </body>
+</html>

@@ -1,0 +1,79 @@
+<html>
+  <head>
+    <meta name="generator"
+    content="HTML Tidy for HTML5 (experimental) for Windows https://github.com/w3c/tidy-html5/tree/c63cc39" />
+    <title></title>
+	<script type="text/javascript" src="js/funcionesGenericas.js"></script>
+	<script type="text/javascript" src="js/jquery-3.2.0.js"></script>
+  </head>
+  <body>
+    <h1 class="text-white margin-bottom-0 text-size-30 text-thin text-line-height-1 background-primary text-center">Buscar</h1>
+    <div class="section background-white" id="buscaProfe">
+      <div class="margin">
+		<form class="customform" action="">
+            <div class="line padding-2x block-bordered border-radius">
+                <div class="margin">
+                      <div class="s-12 m-12 l-6">
+                        <input name="bususer" class="required email border-radius text-l-size-16" placeholder="" title="" type="radio" checked = "checked"/>
+						<label>Email</label>
+						<input name="emailb" class="required name border-radius text-l-size-16" placeholder="" title="" type="text"/>
+                      </div>
+                      <div class="s-12 m-12 l-6" id="busNombre">
+						<input name="bususer" class="required email border-radius text-l-size-16" placeholder="" title="" type="radio" />
+						<label>Nombre</label>
+                        <input name="nombreb" class="required name border-radius text-l-size-16" placeholder="Nombre(s)" title="" type="text" />
+						<input name="apb" class="required name border-radius text-l-size-16" placeholder="Apellido Paterno" title="" type="text" />
+						<input name="amb" class="required name border-radius text-l-size-16" placeholder="Apellido Materno" title="" type="text" />
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <div class="s-12"><button id="buscar" class="submit-form button background-primary border-radius text-white" type="submit">Buscar</button></div>
+				  <div class="s-12" style="display:none" id="tablabuscar">
+				  <h2 class="text-primary margin-bottom-0 text-size-30 text-thin text-line-height-1 text-center">Resultados Búsqueda</h2>
+					<table>
+						<thead>
+							<tr>
+								<th>Grado</th>
+								<th>Nombre Completo</th>
+								<th>Semestre Alta</th>
+								<th>Email</th>
+								<th>Seleccionar</th>
+
+								
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>001</td>
+								<td>Juan José Rivera Alemán</td>
+								<td>Ene-Jun 2017 2017</td>
+								<td>prueba@prueba.com</td>
+								<td>Si</td>
+								<td><img id="img1" class="img1c" src="img/sgaa_icono_informacion.png" data-target="masinfo" data-toggle="modal"/></td>
+
+							</tr>
+						</tbody>
+					</table>
+				  </div>
+                </form>
+      </div>
+	</div>
+	<script>
+	function siguienteAntes(){
+		if($('#r2').is(':checked')) {
+			siguiente(0);
+		}
+		if($('#r1').is(':checked')) {
+			siguiente(6);
+		}
+		else{
+			alert("no disp");
+		}
+	}	
+		
+		
+	</script>
+  </body>
+</html>
