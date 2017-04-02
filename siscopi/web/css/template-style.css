@@ -2161,8 +2161,12 @@ form.signin input::-webkit-input-placeholder { color:#bbb; text-shadow:0 0 2px #
 	width: 30px;
 
 }
-.scrollhorario{
-	overflow: scroll;
-	height:200px;
-	
+.block{ display: block; 
+width: 100%;}
+
+.tbodyt {
+    height: 200px;       /* Just for the demo          */
+    overflow-y: auto;    /* Trigger vertical scroll    */
+    overflow-x: hidden;  /* Hide the horizontal scroll */
 }
+

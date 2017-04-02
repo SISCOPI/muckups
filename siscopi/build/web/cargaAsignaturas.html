@@ -55,11 +55,31 @@
                 <input name="am" class="required name border-radius text-l-size-16" placeholder="" title="" type="text" />
              </div>
 			 <div class="right">
-				<a href="#evaluar"><img src="img/lupa.png" alt="mas"></a>
+				<a href="#buscarP"><img src="img/lupa.png" alt="mas"></a>
 			 </div>
          </div>
 		 
 		 <div class="margin" id="existeProfesor" style="display:none">
+			<table>
+				<thead>
+					<tr>
+						<th>Head 1</th>
+						<th>Head 2</th>
+						<th>Head 3</th>
+						<th>Head 4</th>
+						<th>Head 5</th>
+					</tr>
+				</thead>
+				<tbody class="tbodyt">
+					<tr>
+						<td>Content 1</td>
+						<td>Content 2</td>
+						<td>Content 3</td>
+						<td>Content 4</td>
+						<td>Content 5</td>
+					</tr>
+				</tbody>
+			</table>
 			
 		 </div>
 		 <div class="margin" style="display:none" id="nuevoProfesor">
@@ -80,8 +100,8 @@
 		 
 		 <h2 class="text-secondary margin-bottom-0 text-size-10 text-center">Horario</h2>
 		 <div class="margin">
-			<table id="thorario" class="borderTable ">
-				<thead class="lightblue">
+			<table id="thorario" class="borderTable block">
+				<thead class="lightblue block">
 					<tr>
 						<th></th>
 						<th>Lun</th>
@@ -92,7 +112,7 @@
 						<th>Sab</th>
 					</tr>
 				</thead>
-				<tbody>
+				<tbody class="tbodyt block">
 				
 				</tbody>
 
@@ -112,19 +132,24 @@
 	
 	cargaHoras();
 		$(function() {
-		 $("#fechahoy").text(fechaActual());
-		cargaHoras();
-		 $("table").fixMe();
-		 
+			$("#fechahoy").text(fechaActual());
+			cargaHoras();
+			//$("#thorario").fixMe();
+			 
+			$('a[href="#buscarP"]').click(function(){
+				alert('Sign new href executed.'); 
+				$("#existeProfesor" ).show();
+				//$("#inicioiv" ).hide();
+			}); 
 
 			
 	
 		});
 		
 		;(function($) {
-   $.fn.fixMe = function() {
-      return this.each(function() {
-         var $this = $(this),
+			$.fn.fixMe = function() {
+			return this.each(function() {
+			var $this = $(this),
             $t_fixed;
          function init() {
             $this.wrap('<div class="container" />');
@@ -155,5 +180,8 @@
 		
 		
 	</script>
+	<style>
+
+	</style>
   </body>
 </html>
