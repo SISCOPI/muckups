@@ -2060,6 +2060,7 @@ form.signin input::-webkit-input-placeholder { color:#bbb; text-shadow:0 0 2px #
     border: 1px solid #0b74a8;
 	border-collapse:separate;
 	border-spacing:2px;
+	
 }
 
 .tdfondoazul{
@@ -2149,6 +2150,14 @@ form.signin input::-webkit-input-placeholder { color:#bbb; text-shadow:0 0 2px #
 	margin-bottom:0.25rem;
 
 }
+.tranchoeval0{
+	width: 10%;
+
+}
+.tranchoeval15{
+	width: 11.5%;
+
+}
 .tranchoeval1{
 	width: 20%;
 
@@ -2161,12 +2170,33 @@ form.signin input::-webkit-input-placeholder { color:#bbb; text-shadow:0 0 2px #
 	width: 30px;
 
 }
-.block{ display: block; 
-width: 100%;}
+.block{ 
+	display: block; 
+}
 
 .tbodyt {
-    height: 200px;       /* Just for the demo          */
+    height: 300px;       /* Just for the demo          */
     overflow-y: auto;    /* Trigger vertical scroll    */
-    overflow-x: hidden;  /* Hide the horizontal scroll */
+/*    overflow-x: hidden;  /* Hide the horizontal scroll */
+}
+table td.highlighted {
+  background-color:#2c3fa3;
+}
+
+/*table tbody tr:hover {
+    background-color: orange;
+    cursor: pointer;
+}
+*/
+.selected {
+    background-color: lightblue;
+	color:orange;
+    
+}
+
+.paddingfield {
+    padding: 1.5rem 1.25rem;
+	margin-top:2.5rem;
+	margin-bottom: 1.5rem;
 }
 

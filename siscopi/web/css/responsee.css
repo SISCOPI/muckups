@@ -67,8 +67,12 @@ table {
 table tr td, table tr th {
 	padding:0.625rem;
 	height: auto;
+	
 }
-table tfoot, table thead, table tbody, table tr:nth-of-type(2n) {background:none repeat scroll 0 0 #f0f0f0;}
+table tfoot, table thead, table tbody, table tr:nth-of-type(2n) {
+	background:none repeat scroll 0 0 #f0f0f0;
+	
+	}
 th,table tr:nth-of-type(2n) td {border-right:1px solid #fff;}
 td {border-right:1px solid #f0f0f0;}
 .size-960 .line,.size-1140 .line,.size-1280 .line {

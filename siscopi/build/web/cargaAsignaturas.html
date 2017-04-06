@@ -4,21 +4,28 @@
     content="HTML Tidy for HTML5 (experimental) for Windows https://github.com/w3c/tidy-html5/tree/c63cc39" />
     <title></title>
 	<script type="text/javascript" src="js/funcionesGenericas.js"></script>
+	<script type="text/javascript" src="js/funcionesCargaAsignaturas.js"></script>
 	<script type="text/javascript" src="js/jquery-3.2.0.js"></script>
+	<script type="text/javascript" src="js/jquery.floatThead.js"></script>
+	
+	
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+
   </head>
   <body>
-    <h1 class="text-white margin-bottom-0 text-size-30 text-thin text-line-height-1 background-primary text-center">Cargar Asignaturas</h1>
-    
+  <div class="section background-white">
+    <h1 class="text-white margin-bottom-20 text-size-30 text-thin text-line-height-1 background-primary text-center">Cargar Asignaturas</h1>
+    <table class="borderTable">
+		<tr>
+			<td><h2 class="text-primary margin-bottom-0 text-s-size-12 text-center">Fecha:</h2></td>
+			<td class="text-center"><label id="fechahoy" class="text-size-16 text-secondary"></label></td>
+			<td><h2 class="text-primary margin-bottom-0 text-s-size-12 text-center">Semestre:</h2></td>
+			<td class="text-center"><label id="" class="text-size-16 text-secondary">Enero - Junio 2017 </label></td>
+		</tr>
+	</table>
 	<div class="section background-white" id="altaAsignatura">
-		<table class="borderTable">
-			<tr>
-				<td><h2 class="text-primary margin-bottom-0 text-s-size-12 text-center">Fecha:</h2></td>
-				<td class="text-center"><label id="fechahoy" class="text-size-16 text-secondary"></label></td>
-				<td><h2 class="text-primary margin-bottom-0 text-s-size-12 text-center">Semestre:</h2></td>
-				<td class="text-center"><label id="" class="text-size-16 text-secondary">Enero - Junio 2017 </label></td>
-			</tr>
-		</table>
-      <div class="margin">
+		
+      
         <form class="customform" action="">
 
           
@@ -27,61 +34,57 @@
 			<div class="margin">
             <div class="s-10 m-12 l-2">
 				<label class="text-size-14">Clave</label>
-				<input type="text" title="" class="required"/>
+				<input type="text" title="" class="required" id="clave"/>
            </div>
 		   <div class="s-10 m-12 l-6">
 				<label class="text-size-14">Asignatura</label>
-				<input type="text" title="" class="required"/>
+				<input type="text" title="" class="required" id="asignaturan"/>
            </div>
            <div class="s-10 m-12 l-4">
 				<label class="text-size-14">Grupo</label>
-				<input type="text" title="" class="required"/>
+				<input type="text" title="" class="required" id="grupo"/>
            </div>
  
 			
          </div>
 		 <h2 class="text-secondary margin-bottom-0 text-size-10 text-center">Profesor</h2>
+		 
+		 <div class="margin">
+			<div class="s-10 m-12 l-4">
+				
+				<input type="radio" name="selectpro" value="1" id="r1"/><label for="r1" class="text-size-16">Nuevo</label>
+			</div>
+			<div class="s-10 m-12 l-4">
+				<input type="radio" name="selectpro" value="2" id="r2"/><label for="r2" class="text-size-16">Existente</label>
+			</div>
+		  </div>
 		 <div class="margin" id="datosProfesor">
 			 <div class="s-10 m-12 l-4">
 				<label> Nombre(s):</label>
-                <input name="nombre" class="required email border-radius text-l-size-16" placeholder="" title="" type="text" />
+                <input name="nombre" class="required email border-radius text-l-size-16" placeholder="" title="" type="text" disabled="true" id="nombrep"/>
              </div>
              <div class="s-10 m-12 l-4">
 				<label> Apellido Paterno:</label>
-                <input name="ap" class="required name border-radius text-l-size-16" placeholder="" title="" type="text" />
+                <input name="ap" class="required name border-radius text-l-size-16" placeholder="" title="" type="text" disabled="true" id="ap"/>
              </div>
 		     <div class="s-10 m-12 l-4">
 				<label> Apellido Materno:</label>
-                <input name="am" class="required name border-radius text-l-size-16" placeholder="" title="" type="text" />
+                <input name="am" class="required name border-radius text-l-size-16" placeholder="" title="" type="text" disabled="true" id="am"/>
              </div>
-			 <div class="right">
+			  <div class="s-10 m-12 l-4" id="gradop" style="display:none">
+				<label> Grado:</label>
+                <input name="nombre" class="required email border-radius text-l-size-16" placeholder="" title="" type="text" />
+             </div>
+			 <div class="s-10 m-12 l-4" id="email" style="display:none">
+				<label> Email:</label>
+                <input name="nombre" class="required email border-radius text-l-size-16" placeholder="" title="" type="text" />
+             </div>
+			 <div class="right" style="display:none">
 				<a href="#buscarP"><img src="img/lupa.png" alt="mas"></a>
 			 </div>
          </div>
 		 
-		 <div class="margin" id="existeProfesor" style="display:none">
-			<table>
-				<thead>
-					<tr>
-						<th>Head 1</th>
-						<th>Head 2</th>
-						<th>Head 3</th>
-						<th>Head 4</th>
-						<th>Head 5</th>
-					</tr>
-				</thead>
-				<tbody class="tbodyt">
-					<tr>
-						<td>Content 1</td>
-						<td>Content 2</td>
-						<td>Content 3</td>
-						<td>Content 4</td>
-						<td>Content 5</td>
-					</tr>
-				</tbody>
-			</table>
-			
-		 </div>
+		 
 		 <div class="margin" style="display:none" id="nuevoProfesor">
 			 <div class="s-10 m-12 l-4">
 				<label> Nombre(s):</label>
@@ -97,11 +100,11 @@
              </div>
          </div>
 		
-		 
+		 <div class="fix" id="horario">
 		 <h2 class="text-secondary margin-bottom-0 text-size-10 text-center">Horario</h2>
-		 <div class="margin">
-			<table id="thorario" class="borderTable block">
-				<thead class="lightblue block">
+		 
+			<table id="thorario" class="borderTable">
+				<thead class="lightblue">
 					<tr>
 						<th></th>
 						<th>Lun</th>
@@ -112,8 +115,16 @@
 						<th>Sab</th>
 					</tr>
 				</thead>
-				<tbody class="tbodyt block">
-				
+				<tbody>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
 				</tbody>
 
 			</table>
@@ -121,67 +132,280 @@
 		 </div>
 	
 		<div class="s-12 text-center margin2x ">
-			<button class="border-radius text-white cancel-btn" type="button" onclick="salir(3)">Cancelar</button>
+			<button class="border-radius text-white cancel-btn" type="button" onclick="salir(2)">Cancelar</button>
 			
-			<button class="submit-form button background-primary border-radius text-white" type="submit" onclick="siguiente(4)">Alta</button>
+			<button class="submit-form button background-primary border-radius text-white" type="submit" onclick="anteriorSiguiente(1)">Siguiente</button>
 		</div>
+		<div id="existeProfesor" title="Seleccionar Profesor">
+			<table id="profesores">
+				<thead>
+					<tr>
+						<th>grado</th>
+						<th>Nombre (s)</th>
+						<th>Apellido Paterno</th>
+						<th>Apellido Materno</th>
+						<th>email</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>DR</td>
+						<td>Hugo</td>
+						<td>Domingo</td>
+						<td>Casas</td>
+						<td>hugo@gmail.com</td>
+					</tr>
+					<tr>
+						<td>DRA</td>
+						<td>Sofía</td>
+						<td>Torres</td>
+						<td>Mora</td>
+						<td>sofia@gmail.com</td>
+					</tr>
+					<tr>
+						<td>Ing</td>
+						<td>Sergio</td>
+						<td>Portillo</td>
+						<td>Zamora</td>
+						<td>sergio@gmail.com</td>
+					</tr>
+					<tr>
+						<td>Ing</td>
+						<td>Juan</td>
+						<td>Carrillo</td>
+						<td>Zamora</td>
+						<td>juan@gmail.com</td>
+					</tr>
+				</tbody>
+			</table>
+			
+		 </div>
         </form>
-      </div>
+		
 	</div>
-	<script>
+	<div class="section background-white" id="altaAsignaturaAplica" style="display:none">
+		<form class="customform" action="">
+			<fieldset>
+				<legend>
+					<h2 class="text-primary margin-bottom-0 text-size-10 text-center">Asignatura</h2>
+				</legend>
+			
+		 
+				<div class="margin">
+					<div class="s-10 m-12 l-2">
+						<label class="text-size-14">Clave</label>
+						<label class="text-size-16 text-secondary" id="lclavea"/>
+					</div>
+					<div class="s-10 m-12 l-6">
+						<label class="text-size-14">Asignatura</label>
+						<label class="text-size-16 text-secondary" id="lasignatura"/>
+					</div>
+					<div class="s-10 m-12 l-4">
+						<label class="text-size-14">Grupo</label>
+						<label class="text-size-16 text-secondary" id="lgrupoa"/>
+					</div>
+				</div>
+			</fieldset>
+			<fieldset>
+				<legend>
+					<h2 class="text-primary margin-bottom-0 text-size-10 text-center">Profesor</h2>
+				</legend>
+				
+				<div class="margin" id="datosProfesor">
+					 <div class="s-10 m-12 l-4">
+						<label> Nombre(s):</label>
+						<label class="text-size-16 text-secondary" id="lnombrep"/>
+					 </div>
+					 <div class="s-10 m-12 l-4">
+						<label> Apellido Paterno:</label>
+						<label class="text-size-16 text-secondary" id="lapp"/>
+					 </div>
+					 <div class="s-10 m-12 l-4">
+						<label> Apellido Materno:</label>
+						<label class="text-size-16 text-secondary" id="lamp"/>
+					 </div>
+
+				</div>
+			</fieldset>
+			<fieldset>
+				<legend>
+					<h2 class="text-primary margin-bottom-0 text-size-10 text-center">Horario</h2>
+				</legend>
+					<table>
+						<thead>
+							<tr>
+								<th>Lunes</th>
+								<th>Martes</th>
+								<th>Miercoles</th>
+								<th>Jueves</th>
+								<th>Viernes</th>
+								<th>Sábado</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="text-center">
+								<td>10:00 - 11:00</td>
+								<td>13:00 - 15:00</td>
+								<td>09:00 - 11:00</td>
+							</tr>
+							
+						</tbody>
+					</table>
+				
+			</fieldset>
+			<div class="s-12 text-center margin2x ">
+				<button class="border-radius text-white cancel-btn" type="button" onclick="salir(2)">Cancelar</button>
+				<button class="border-radius text-white prev-btn" type="button" onclick="anteriorSiguiente(0)">Anterior</button>
+				<button class="submit-form button background-primary border-radius text-white" type="submit" onclick="anteriorSiguiente(4)">Confirmar</button>
+			</div>
+		
+		</form>
 	
-	cargaHoras();
+	</div>
+	
+	</div>
+	<script src="js/jquery-ui.js"></script>
+	<script>
 		$(function() {
+			$("#altaAsignaturaConfirma").hide();
 			$("#fechahoy").text(fechaActual());
 			cargaHoras();
-			//$("#thorario").fixMe();
+			
+			
+			$( "#existeProfesor" ).dialog({
+				autoOpen: false,
+				width: 'auto', // overcomes width:'auto' and maxWidth bug
+				maxWidth: 600,
+				height: 'auto',
+				modal: true,
+				fluid: true, //new option
+				resizable: false,
+				buttons: [
+					{
+						text: "Aceptar",
+						click: function() {
+							var value =$(".selected td:nth-child(2)").html();
+							var value2 =$(".selected td:nth-child(3)").html();
+							var value3 =$(".selected td:nth-child(4)").html();
+							value = value || "Profesor no seleccionado";
+							//alert(value);
+							if(value=="Profesor no seleccionado"){
+								alert(value);
+								
+							}
+							else{
+								$("#nombrep").val(value);
+								$("#ap").val(value2);
+								$("#am").val(value3);
+								$("#r2").prop('checked', false);
+								$( this ).dialog( "close" );
+							}
+						}
+					},
+					{
+						text: "Cancelar",
+						click: function() {
+							
+							$("#r2").prop('checked', false);
+							$( this ).dialog( "close" );
+						}
+					}
+				]
+			});
+		//	$("#thorario").fixMe();
 			 
 			$('a[href="#buscarP"]').click(function(){
-				alert('Sign new href executed.'); 
-				$("#existeProfesor" ).show();
+				$( "#existeProfesor" ).dialog( "open" );
+				event.preventDefault();
+				//$("#existeProfesor" ).show();
 				//$("#inicioiv" ).hide();
 			}); 
 
-			
-	
+			var $table = $('#thorario');
+			$table.floatThead({
+			responsiveContainer: function($table){
+			return $table.closest('.table-responsive');
+			}
+			});	
+		//sel celda
+		var isMouseDown = false,
+		isHighlighted;
+		$(".hora")
+		.mousedown(function () {
+		  isMouseDown = true;
+		  $(this).toggleClass("highlighted");
+		  isHighlighted = $(this).hasClass("highlighted");
+		  
+		 var currentRow=$(this).closest("tr"); 
+         
+         var col1=currentRow.find("td:eq(0)").text(); // get current row 1st TD value
+		 
+         
+         var data=col1+"\t";
+         
+         console.log(data);
+		  
+		  return false; // prevent text selection
+		})
+		.mouseover(function () {
+		  if (isMouseDown) {
+			$(this).toggleClass("highlighted", isHighlighted);
+		  }
+		});
+
+		$(document)
+		.mouseup(function () {
+		  isMouseDown = false;
 		});
 		
-		;(function($) {
-			$.fn.fixMe = function() {
-			return this.each(function() {
-			var $this = $(this),
-            $t_fixed;
-         function init() {
-            $this.wrap('<div class="container" />');
-            $t_fixed = $this.clone();
-            $t_fixed.find("tbody").remove().end().addClass("fixed").insertBefore($this);
-            resizeFixed();
-         }
-         function resizeFixed() {
-            $t_fixed.find("th").each(function(index) {
-               $(this).css("width",$this.find("th").eq(index).outerWidth()+"px");
-            });
-         }
-         function scrollFixed() {
-            var offset = $(this).scrollTop(),
-            tableOffsetTop = $this.offset().top,
-            tableOffsetBottom = tableOffsetTop + $this.height() - $this.find("thead").height();
-            if(offset < tableOffsetTop || offset > tableOffsetBottom)
-               $t_fixed.hide();
-            else if(offset >= tableOffsetTop && offset <= tableOffsetBottom && $t_fixed.is(":hidden"))
-               $t_fixed.show();
-         }
-         $(window).resize(resizeFixed);
-         $(window).scroll(scrollFixed);
-         init();
-      });
-   };
-})(jQuery);
+		 $('input[type=radio][name=selectpro]').change(function() {
+        if (this.value == '1') {
+            $( "#gradop").show();
+			$( "#email").show();
+			$( "#nombrep").prop('disabled', false);
+			$( "#ap").prop('disabled', false);
+			$( "#am").prop('disabled', false);
+			$("#nombrep").val("");
+			$("#ap").val("");
+			$("#am").val("");
+			$("#nombrep").focus();
+			
+        }
+        else if (this.value == '2') {
+			$( "#gradop").hide();
+			$( "#email").hide();
+			$("#nombrep").val("");
+			$("#ap").val("");
+			$("#am").val("");
+			$( "#nombrep").prop('disabled', true);
+			$( "#ap").prop('disabled', true);
+			$( "#am").prop('disabled', true);
+            $( "#existeProfesor" ).dialog( "open" );
+				event.preventDefault();
+        }
+    });
+	
+	$("#profesores tbody tr").click(function(){
+	$(this).addClass('selected').siblings().removeClass('selected');    
+	var value=$(this).find('td:first').html();
+	//alert(value);    
+	});
+
+	$('.ok').on('click', function(e){
+		alert($("#profesores tr.selected td:first").html());
+	});
+	
+	////
+	
+	
+	///
+	
 		
+	});
+	
+
 		
 	</script>
-	<style>
 
-	</style>
   </body>
 </html>
