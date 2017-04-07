@@ -137,7 +137,7 @@
         <div class="line" >
           <div class="margin">
             <form class="customform" action="">
-                  <div class="line padding-2x block-bordered border-radius">
+                  <div class="line padding-2x block-bordered border-radius" id="filtroBuscar">
                     <div class="margin">
                       <div class="s-12 m-12 l-6">
                         <input name="bususer" class="required email border-radius text-l-size-16" placeholder="" title="" type="radio" checked = "checked"/>
@@ -153,9 +153,10 @@
                       </div>
 
                     </div>
+					<div class="s-12 text-center"><button id="buscar" class="submit-form button background-primary border-radius text-white" type="submit">Buscar</button></div>
                   </div>
 
-                  <div class="s-12"><button id="buscar" class="submit-form button background-primary border-radius text-white" type="submit">Buscar</button></div>
+                  
 				  <div class="s-12" style="display:none" id="tablabuscar">
 				  <h2 class="text-primary margin-bottom-0 text-size-30 text-thin text-line-height-1 text-center">Resultados Búsqueda</h2>
 					<table>
@@ -180,11 +181,12 @@
 								<td>prueba@prueba.com</td>
 								<td>Si</td>
 								<td><a href="#buscarU"><img src="img/sgaa_icono_informacion.png" alt="mas"></a></td>
-								<td><a href="#buscarP"><img src="img/Delete_Icon.png" alt="mas" data-target="masinfo" data-toggle="modal"></a></td>
-								<td><a href="#buscarP"><img src="img/edit.png" alt="mas" data-target="masinfo" data-toggle="modal"></a></td>
+								<td><a href="#borrarU"><img src="img/Delete_Icon.png" alt="mas"></a></td>
+								<td><a href="#modificarU"><img src="img/edit.png" alt="mas"></a></td>
 							</tr>
 						</tbody>
 					</table>
+					<div class="s-12 text-center"><button id="otrabuscar" class="submit-form button background-primary border-radius text-white" type="submit">Otra Búsqueda</button></div>
 				  </div>
                 </form>
 			</div>
@@ -511,11 +513,11 @@
 			</div>
 		</div>
 	</div>
-	<div id="dialog-borrar" style="display:none" >
+	<div id="dialog-borrar">
 		<div >
 		<p>
 			<span class="ui-icon ui-icon-alert" style="float:left; margin:12px 12px 20px 0;"></span>
-			These items will be permanently deleted and cannot be recovered. Are you sure?
+			"Está seguro de dar de baja al usuario <nombre> solo se inactivará su acceso o No se puede dar de baja al usuario <nombre> por qué tiene proyectos activos, solicite un cambio de proyecto"
 		</p>
 		</div>
 	</div>
@@ -525,11 +527,52 @@
 			Su operación ha sido completada correctamente
 		</p>
 	</div>
-	<div id="buscaUD" title="Más información">
+	<div id="buscaUD" title="Más información" class="background-white">
+		
+			<h2 class="text-primary margin-bottom-0 text-size-10 text-center">Ficha Usuario</h2>
+			<div class="margin">
+				<div class="s-10 m-12 l-6">
+					<label class="text-size-14">Nombre completo:</label>
+					<label class="text-size-14 text-secondary">ISC Juan José Rivera Alemán</label>
+				</div>
+				<div class="s-10 m-12 l-4">
+					<label class="text-size-14">Email:</label>
+					<label class="text-size-14 text-secondary">juanjo8585@hotmail.com</label>
+				</div>
+				<div class="s-10 m-12 l-2">
+					<label class="text-size-14">Fecha Alta:</label>
+					<label class="text-size-14 text-secondary">01-01-2017</label>
+				</div>
+			</div>
+			<div class="margin">
+				<div class="s-10 m-12 l-4">
+					<label class="text-size-14">Semestre Alta:</label>
+					<label class="text-size-14 text-secondary">Ene-Jun 2017</label>
+				</div>
+				<div class="s-10 m-12 l-6">
+					<label class="text-size-14">User Alta:</label>
+					<label class="text-size-14 text-secondary">florjp@hotmail.com</label>
+				</div>
+				<div class="s-10 m-12 l-2">
+					<label class="text-size-14">últ modif:</label>
+					<label class="text-size-14 text-secondary">12-01-2017</label>
+				</div>
+			</div>
+			<div class="margin">
+				<div class="s-10 m-12 l-4">
+					<label class="text-size-14">user modif:</label>
+					<label class="text-size-14 text-secondary">florjp@hotmail.com</label>
+				</div>
+			</div>
+		
+	</div>
+	<div id="modifU" title="Modificar">
+		<div >
 		<p>
 			<span class="ui-icon ui-icon-alert" style="float:left; margin:12px 12px 20px 0;"></span>
-			Su operación ha sido completada correctamente
+			"Está seguro de dar de baja al usuario <nombre> solo se inactivará su acceso o No se puede dar de baja al usuario <nombre> por qué tiene proyectos activos, solicite un cambio de proyecto"
 		</p>
+		</div>
 	</div>
     <div id="footer">
       <!-- Content will be inserted by jQuery from footer.html -->
@@ -566,18 +609,22 @@
 		  width: 400,
 		  modal: true,
 		  autoOpen: false,
-		  buttons: {
-			"Baja": function() {
-			  $( this ).dialog( "close" );
-			  
-			},
-			Cancel: function() {
-			  $( this ).dialog( "close" );
-			}
-		  },
-			create:function () {
-			$(this).closest(".ui-dialog").find(".ui-button:first").addClass("acepta");
-			}
+		  buttons : [
+			{
+				text  : 'Cancelar', 
+                click : function() {
+                             $(this).dialog('close')
+                         }, 
+                class: 'button-acepta'
+            },
+			{
+				text  : 'Aceptar', 
+                click : function() {
+                             $(this).dialog('close')
+                         }, 
+                class: 'button-acepta'
+            }
+			]
 		});
 		
 		
@@ -600,11 +647,25 @@
 		  })
 		$('#buscar').click(function(){
 			$("#tablabuscar").show();
+			$("#filtroBuscar").hide();
 			return false;
-		}); 
+		});
+		$('#otrabuscar').click(function(){
+			$("#tablabuscar").hide();
+			$("#filtroBuscar").show();
+			return false;
+		});		
 		});
 		
 	</script>
+	<style>
+		.button-acepta{
+		font-size:15px;
+		color: #ffffff;
+		width:150px;
+		background:#90C93E;
+}
+	</style>
 
    </body>
 </html>
