@@ -1,0 +1,201 @@
+<html>
+  <head>
+    <meta name="generator"
+    content="HTML Tidy for HTML5 (experimental) for Windows https://github.com/w3c/tidy-html5/tree/c63cc39" />
+    <title></title>
+	<script type="text/javascript" src="js/funcionesGenericas.js"></script>
+	
+	<script type="text/javascript" src="js/jquery-3.2.0.js"></script>
+	<script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
+  </head>
+  <body>
+    <section class="section background-white" id="actuaUser" > 
+		<h1 class="text-white margin-bottom-10 text-size-30 text-thin text-line-height-1 background-primary text-center">Baja y Modificación de Usuarios</h1>
+        <div class="line" >
+          <div class="margin">
+            <form class="customform" action="">
+                  <div class="line padding-2x block-bordered border-radius" id="filtroBuscar">
+                    <div class="margin">
+                      <div class="s-12 m-12 l-6">
+                        <input name="bususer" class="required email border-radius text-l-size-16" placeholder="" title="" type="radio" checked = "checked"/>
+						<label>Email</label>
+						<input name="emailb" class="required name border-radius text-l-size-16" placeholder="" title="" type="text"/>
+                      </div>
+                      <div class="s-12 m-12 l-6" id="busNombre">
+						<input name="bususer" class="required email border-radius text-l-size-16" placeholder="" title="" type="radio" />
+						<label>Nombre</label>
+                        <input name="nombreb" class="required name border-radius text-l-size-16" placeholder="Nombre(s)" title="" type="text" />
+						<input name="apb" class="required name border-radius text-l-size-16" placeholder="Apellido Paterno" title="" type="text" />
+						<input name="amb" class="required name border-radius text-l-size-16" placeholder="Apellido Materno" title="" type="text" />
+                      </div>
+
+                    </div>
+					<div class="s-12 text-center"><button id="buscar" class="submit-form button background-primary border-radius text-white" type="button">Buscar</button></div>
+                  </div>
+
+                  
+				  <div class="s-12" style="display:none" id="tablabuscar">
+				  <h2 class="text-primary margin-bottom-0 text-size-30 text-thin text-line-height-1 text-center">Resultados Búsqueda</h2>
+				  <div class="margin">
+					<table id="tusuarios">
+						<thead>
+							<tr>
+								<th>Id</th>
+								<th>Nombre Completo</th>
+								<th>Semestre Alta</th>
+								<th>Email</th>
+								<th>Activo</th>
+								<th>Más Inf</th>
+								<th>Baja</th>
+								<th>Modificar</th>
+								
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>001</td>
+								<td>Juan José Rivera Alemán</td>
+								<td>Ene-Jun 2017</td>
+								<td>prueba@prueba.com</td>
+								<td>Si</td>
+								<td><a href="#buscarU"><img src="img/sgaa_icono_informacion.png" alt="mas"></a></td>
+								<td><a href="#borrarU"><img src="img/Delete_Icon.png" alt="mas"></a></td>
+								<td><a href="#modificarU"><img src="img/edit.png" alt="mas"></a></td>
+							</tr>
+							<tr>
+								<td>002</td>
+								<td>Sofía Castro Zarate</td>
+								<td>Ago-Dic 2017</td>
+								<td>sofia@prueba.com</td>
+								<td>Si</td>
+								<td><a href="#buscarU"><img src="img/sgaa_icono_informacion.png" alt="mas"></a></td>
+								<td><a href="#borrarU"><img src="img/Delete_Icon.png" alt="mas"></a></td>
+								<td><a href="#modificarU" class="mu"><img src="img/edit.png" alt="mas"></a></td>
+							</tr>
+						</tbody>
+					</table>
+					</div>
+					<div class="s-12 text-center"><button id="otrabuscar" class="submit-form button background-primary border-radius text-white" type="submit">Otra Búsqueda</button></div>
+				  </div>
+                </form>
+			</div>
+		</div>
+      </section>
+	<div id="buscaUD" title="Más información" class="background-white">
+		
+		<h2 class="text-primary margin-bottom-0 text-size-10 text-center">Ficha Usuario</h2>
+		<div class="margin">
+			<div class="s-10 m-12 l-6">
+				<label class="text-size-14">Nombre completo:</label>
+				<label class="text-size-14 text-secondary">ISC Juan José Rivera Alemán</label>
+			</div>
+			<div class="s-10 m-12 l-4">
+				<label class="text-size-14">Email:</label>
+				<label class="text-size-14 text-secondary">juanjo8585@hotmail.com</label>
+			</div>
+			<div class="s-10 m-12 l-2">
+				<label class="text-size-14">Fecha Alta:</label>
+				<label class="text-size-14 text-secondary">01-01-2017</label>
+			</div>
+		</div>
+		<div class="margin">
+			<div class="s-10 m-12 l-4">
+				<label class="text-size-14">Semestre Alta:</label>
+				<label class="text-size-14 text-secondary">Ene-Jun 2017</label>
+			</div>
+			<div class="s-10 m-12 l-6">
+				<label class="text-size-14">User Alta:</label>
+				<label class="text-size-14 text-secondary">florjp@hotmail.com</label>
+			</div>
+			<div class="s-10 m-12 l-2">
+				<label class="text-size-14">últ modif:</label>
+				<label class="text-size-14 text-secondary">12-01-2017</label>
+			</div>
+		</div>
+		<div class="margin">
+			<div class="s-10 m-12 l-4">
+				<label class="text-size-14">user modif:</label>
+				<label class="text-size-14 text-secondary">florjp@hotmail.com</label>
+			</div>
+		</div>
+		
+	</div>
+	<div id="modifU" title="Modificar" class="background-white">
+		<h2 class="text-primary margin-bottom-0 text-size-10 text-center">Modificar datos básicos Usuario</h2>
+		<div class="line">
+			<div class="margin">
+				<div class="s-10 m-12 l-4">
+					<label class="text-size-14">Nombre(s):</label>
+					<input type="text" id="nombreMU" class="text-size-14 text-secondary"/>
+				</div>
+				<div class="s-10 m-12 l-4">
+					<label class="text-size-14">Apellido paterno:</label>
+					<input type="text" id="apMU" class="text-size-14 text-secondary"/>
+				</div>
+				<div class="s-10 m-12 l-4">
+					<label class="text-size-14">Apellido materno:</label>
+					<input type="text" id="amMU" class="text-size-14 text-secondary"/>
+				</div>
+			</div>
+
+		</div>
+		<div class="margin">
+			<div class="s-10 m-12 l-6">
+				<label class="text-size-14">Email:</label>
+				<input type="text" id="emailMU" class="text-size-14 text-secondary"/>
+			</div>
+
+		</div>
+
+	</div>
+	 <link href="css/jquery-ui.css" rel="stylesheet">
+	 <link href="css/jquery.dataTables.min.css" rel="stylesheet">
+	 <script src="js/jquery-ui.js"></script>
+	 
+	<script type="text/javascript" src="js/funcionesJPIUsers.js"></script>
+	<script>
+	$(function() {
+		$('#buscar').click(function(){
+			$("#tablabuscar").show();
+			$("#filtroBuscar").hide();
+			return false;
+		});
+		$('#otrabuscar').click(function(){
+			$("#tablabuscar").hide();
+			$("#filtroBuscar").show();
+			return false;
+		});
+
+	//datatables
+	$('#tusuarios').DataTable( {
+        "pagingType": "full_numbers",
+		
+		"language": {
+        "sProcessing":    "Procesando...",
+        "sLengthMenu":    "Mostrar _MENU_ registros",
+        "sZeroRecords":   "No se encontraron resultados",
+        "sEmptyTable":    "Ningún dato disponible en esta tabla",
+        "sInfo":          "Mostrando registros del _START_ al _END_ de un total de _TOTAL_",
+        "sInfoEmpty":     "Mostrando registros del 0 al 0 de un total de 0",
+        "sInfoFiltered":  "(filtrado de un total de _MAX_ registros)",
+        "sInfoPostFix":   "",
+        "sSearch":        "Buscar:",
+        "sUrl":           "",
+        "sInfoThousands":  ",",
+        "sLoadingRecords": "Cargando...",
+        "oPaginate": {
+            "sFirst":    "Primero",
+            "sLast":    "Último",
+            "sNext":    "Siguiente",
+            "sPrevious": "Anterior"
+        },
+        "oAria": {
+            "sSortAscending":  ": Activar para ordenar la columna de manera ascendente",
+            "sSortDescending": ": Activar para ordenar la columna de manera descendente"
+        }
+		}
+    });
+	});
+	</script>
+  </body>
+</html>

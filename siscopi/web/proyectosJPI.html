@@ -1,0 +1,360 @@
+<html>
+  <head>
+    <meta name="generator"
+    content="HTML Tidy for HTML5 (experimental) for Windows https://github.com/w3c/tidy-html5/tree/c63cc39" />
+    <title></title>
+	<script type="text/javascript" src="js/funcionesGenericas.js"></script>
+	<script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
+	
+  </head>
+  <body>
+    <h1 class="text-white margin-bottom-0 text-size-30 text-thin text-line-height-1 background-primary text-center">Administrar Proyectos</h1>
+    <section class="section background-white"  id="adminPropuestas" > 
+		<div class="line" >
+          <div class="margin">
+            <form class="customform" action="">
+				  <div class="s-12" id="tablabuscar">
+				  
+					<table id="tproyectos">
+						<thead>
+							<tr>
+								<th>Id</th>
+								<th>Titulo</th>
+								<th>Fecha Alta</th>
+								<th>Semestre Alta</th>
+								<th>Fecha Autorización</th>
+								<th>Asesor</th>
+								<th>Propuesta asoc</th>
+								<th>Más Inf</th>
+								<th>Baja</th>
+								
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>001</td>
+								<td>Regulador de temperatura inteligente</td>
+								<td>10/01/17</td>
+								<td>Ene - Jun 2017</td>
+								<td>10/01/17</td>
+								<td>Benito Suarez Santillana</td>
+								<td><a href="#proAsociada">Sí</a></td>
+								<td><a href="#masPro"><img src="img/sgaa_icono_informacion.png" alt="mas"></a></td>
+								<td><a href="#borrarP"><img src="img/Delete_Icon.png" alt="mas"></a></td>
+								
+							</tr>
+							<tr>
+								<td>002</td>
+								<td>Estacionamiento inteligente</td>
+								<td>10/01/17</td>
+								<td>Ene - Jun 2017</td>
+								<td>10/01/17</td>
+								<td>Margarito Cardenas Sarabia</td>
+								<td>No</td>
+								<td><a href="#masPro"><img src="img/sgaa_icono_informacion.png" alt="mas"></a></td>
+								<td><a href="#borrarP"><img src="img/Delete_Icon.png" alt="mas"></a></td>
+								
+							</tr>
+						</tbody>
+					</table>
+					<div class="s-12 text-center"><button class="border-radius text-white cancel-btn" type="button" onclick="salir(2)">Salir</button></div>
+				  </div>
+                </form>
+			</div>
+		</div>
+	
+	</section>
+	<div id="masinfproyecto" title="Más información Proyecto" class="background-white scrolly">
+		
+		<h2 class="text-primary margin-bottom-0 text-size-10 text-center">Título</h2>
+		<h2 class="text-secondary margin-bottom-0 text-size-10 text-center">Robot</h2>
+		<div id="proyectoAccordion">
+		  <h3>General</h3>
+			<div class="line">
+				<div class="s-10 m-12 l-4">
+					<label class="text-size-14 marginlabel">Fecha solicitud:</label>
+					<label class="text-size-14 text-secondary">01-01-2017</label>
+				</div>
+				<div class="s-10 m-12 l-4 marginlabel">
+					<label class="text-size-15">Fecha Autorización:</label>
+					<label class="text-size-14 text-secondary">01-01-2017</label>
+				</div>
+				<div class="s-10 m-12 l-4 marginlabel">
+					<label class="text-size-14">Fecha Ult Modif:</label>
+					<label class="text-size-14 text-secondary">01-01-2017</label>
+				</div>
+				
+				<div class="text-center marginlabel">
+					<label class="text-size-14">Áreas de impacto:</label>
+					<label class="text-size-14 text-secondary">Alimentos, Ambiental y Textil</label>
+				</div>
+				<div class="text-center marginlabel">
+					<label class="text-size-14 ">Creador del proyecto:</label>
+					<label class="text-size-14 text-secondary">Alimentos, Ambiental y Textil</label>
+				</div>
+				<div class="text-center">
+					<div class="s-10 m-12 l-4 marginlabel">
+						<label class="text-size-14">Duración:</label>
+						<label class="text-size-14 text-secondary">5m</label>
+					</div>
+					<div class="s-10 m-12 l-4 marginlabel">
+						<label class="text-size-14">Fecha inicio:</label>
+						<label class="text-size-14 text-secondary">00/00/00</label>
+					</div>
+				</div>
+			</div>
+		  <h3>Integrantes</h3>
+		  <div>
+			<table>
+				<thead>
+					<tr>
+						<th>¿Lider?</th>
+						<th>Nombre Completo</th>
+						<th>NoControl</th>
+						<th>Email</th>
+						<th>Asignatura</th>
+						<th>Fecha Aut.</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td></td>
+						<td>Diana Gonzalez Trujillo</td>
+						<td>00000001</td>
+						<td>a@dominio.com.mx</td>
+						<td><a href="#" class="background-primary link">Taller Inv I</a></td>
+						<td>01/01/17</td>
+					</tr>
+
+					<tr>
+						<td>Sí</td>
+						<td>Diana Gonzalez Trujillo 2</td>
+						<td>00000002</td>
+						<td>a2@dominio.com.mx</td>
+						<td><a href="#" class="background-primary link">Taller Inv I</a></td>
+						<td>01/01/17</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>Diana Gonzalez Trujillo 3</td>
+						<td>00000003</td>
+						<td>a3@dominio.com.mx</td>
+						<td><a href="a" class="background-primary link">Taller Inv II</a></td>
+						<td>01/01/17</td>
+					</tr>
+				</tbody>
+			</table>
+		  </div>
+		  <h3>Empresa y Responsable o Asesor principal</h3>
+		  <div>
+			<fieldset>
+				<legend class="LegendCenter"><b>Responsable/Asesor</b></legend>
+                    
+				<div class="margin">
+					<div class="text-center marginlabel">
+						<label> Nombre Completo:</label>
+                        <label class="text-size-14 text-secondary">Carlos Santiago</label>
+                    </div>
+					  <div class="s-10 m-12 l-4 marginlabel">
+						<label>Email:</label>
+                        <label class="text-size-14 text-secondary">Carlos@yahoo.com.mx</label>
+                      </div>
+					  <div class="s-10 m-12 l-4 marginlabel">
+						<label> Teléfono:</label> 
+                        <label class="text-size-14 text-secondary">010101010101</label>
+                      </div>
+					  <div class="s-10 m-12 l-2 marginlabel">
+						<label> Ext:</label>
+                        <label class="text-size-14 text-secondary">97275</label>
+                      </div>
+					  <div class="s-10 m-12 l-4 marginlabel">
+						<label> Celular:</label>
+                        <label class="text-size-14 text-secondary">1010101010</label>
+                      </div>
+					  <div class="s-10 m-12 l-4 marginlabel">
+						<label> Puesto/Cargo:</label>
+                        <label class="text-size-14 text-secondary">Investigador</label>
+                      </div>
+					  <div class="s-10 m-12 l-4 marginlabel">
+						<label>Fecha Aut.:</label>
+                        <label class="text-size-14 text-secondary">01/01/17</label>
+                      </div>
+                  </div>
+			</fieldset>
+			<fieldset>
+				<legend class="LegendCenter"><b>Empresa</b></legend>
+                    
+				<div class="margin">
+					<div class="text-center marginlabel">
+						<label> Nombre:</label>
+                        <label class="text-size-14 text-secondary">Instituto Tecnológico de Toluca</label>
+                    </div>
+					  <div class="text-center marginlabel">
+						<label>Sector:</label>
+                        <label class="text-size-14 text-secondary">Educación</label>
+                      </div>
+					  <div class="text-center marginlabel">
+						<label>Dirección:</label> 
+                        <label class="text-size-14 text-secondary">Av. Tecnológico s/n. Colonia Agrícola Bellavista Metepec, Edo. De México, México C.P. 52149</label>
+                      </div>
+					  
+                  </div>
+			</fieldset>
+		  </div>
+		  <h3>Datos específicos</h3>
+		  <div class="fondoVerdeAgua">
+			<div class="line">
+
+				<fieldset>
+					<legend class="LegendCenter"><b>Antecedentes</b></legend>
+					<label class="text-size-14 text-secondary">Line 2025: 24/4/2017 15:07:36.051 OzRJN3RZMUorH0HolkfYkLA WebContainer : 2</label>
+			   </fieldset>
+			   <fieldset>
+					<legend class="LegendCenter"><b>Problema a Resolver</b></legend>
+					<label class="text-size-14 text-secondary">Line 2025: 24/4/2017 15:07:36.051 OzRJN3RZMUorH0HolkfYkLA WebContainer : 2</label>
+			   </fieldset>
+				<fieldset>
+					<legend class="LegendCenter"><b>Objetivo(s)</b></legend>
+					<label class="text-size-14 text-secondary">Line 2025: 24/4/2017 15:07:36.051 OzRJN3RZMUorH0HolkfYkLA WebContainer : 2</label>
+			   </fieldset>
+					
+				
+			   <fieldset>
+					<legend class="LegendCenter"><b>Originalidad / Aportación</b></legend>
+					<label class="text-size-14 text-secondary">Line 2025: 24/4/2017 15:07:36.051 OzRJN3RZMUorH0HolkfYkLA WebContainer : 2</label>
+				</fieldset>
+				<fieldset>
+					<legend class="LegendCenter"><b>Resultados esperados</b></legend>
+					<label class="text-size-14 text-secondary">Line 2025: 24/4/2017 15:07:36.051 OzRJN3RZMUorH0HolkfYkLA WebContainer : 2</label>
+				</fieldset>
+			</div>
+		</div>
+		
+	</div>
+		
+		
+	</div>
+	<div id="masinfpropuesta" title="Propuesta Asociada" class="background-white scrolly">
+		
+		<h2 class="text-primary margin-bottom-0 text-size-10 text-center">Ficha Propuesta</h2>
+		<fieldset>
+			<legend class="LegendCenter"><b>General</b></legend>
+			<div class="margin">
+				<div class="text-center">
+					<label class="text-size-14">Título:</label>
+					<label class="text-size-14 text-secondary" id="tituloP"></label>
+				</div>
+				<div class="text-just">
+					<label class="text-size-14">Objetivo:</label>
+					<label class="text-size-14 text-secondary" id="objetivoP">Comprobar el funcionamiento de cañerías y tomas de electricidad y reparar lo que sea necesario.</label>
+				</div>
+				
+			</div>
+			<div class="margin">
+				<div class="s-10 m-12 l-3">
+					<label class="text-size-14">Fecha Alta:</label>
+					<label class="text-size-14 text-secondary">01-01-2017</label>
+				</div>
+				<div class="s-10 m-12 l-3">
+					<label class="text-size-14">Fecha Inicio:</label>
+					<label class="text-size-14 text-secondary">01-01-2017</label>
+				</div>
+				<div class="s-10 m-12 l-3">
+					<label class="text-size-14">Fecha Fin:</label>
+					<label class="text-size-14 text-secondary">01-01-2017</label>
+				</div>
+			</div>
+
+		</fieldset>
+		<fieldset>
+			<legend class="LegendCenter"><b>Entregables</b></legend>
+			<div class="margin text-center">
+				<p class="text-size-14 text-secondary">Modelado</p>
+				<p class="text-size-14 text-secondary">Prototipo virtual y físico</p>
+				<p class="text-size-14 text-secondary">Manuales técnicos</p>
+				<p class="text-size-14 text-secondary">Diagramas</p>
+			</div>
+		</fieldset>
+		<fieldset>
+			<legend class="LegendCenter"><b>Actividades</b></legend>
+			<div class="margin text-center">
+				<p class="text-size-14 text-secondary">Análisis</p>
+				<p class="text-size-14 text-secondary">Diseño</p>
+				<p class="text-size-14 text-secondary">Desarrollo</p>
+				<p class="text-size-14 text-secondary">pruebas</p>
+			</div>
+		</fieldset>
+		<fieldset>
+			<legend class="LegendCenter"><b>Detalle</b></legend>
+			<div class="margin">
+				<div class="s-10 m-12 l-4">
+					<label class="text-size-14">Áreas impacto:</label>
+					<label class="text-size-14 text-secondary">educación, agricultura</label>
+				</div>
+				
+				<div class="s-10 m-12 l-6">
+					<label class="text-size-14">Alcance:</label>
+					<label class="text-size-14 text-secondary">modelo simulado y prototipo físico</label>
+				</div>
+				<div class="s-10 m-12 l-6">
+					<label class="text-size-14">Observaciones:</label>
+					<label class="text-size-14 text-secondary">modelo simulado y prototipo físico</label>
+				</div>
+			</div>
+		</fieldset>
+		<fieldset>
+			<legend class="LegendCenter"><b>Responsable/Asesor</b></legend>
+			<div class="margin">
+				<div class="s-10 m-12 l-10">
+					<label class="text-size-14">Nombre Completo:</label>
+					<label class="text-size-14 text-secondary">Juan Pier San</label>
+				</div>
+				<div class="s-10 m-12 l-4">
+					<label class="text-size-14">Cargo:</label>
+					<label class="text-size-14 text-secondary">director</label>
+				</div>
+				<div class="s-10 m-12 l-4">
+				<label class="text-size-14">Adscripción:</label>
+				<label class="text-size-14 text-secondary">ITT</label>
+			</div>
+				<div class="s-10 m-12 l-4">
+					<label class="text-size-14">Teléfono:</label>
+					<label class="text-size-14 text-secondary">0000000000</label>
+				</div>
+				<div class="s-10 m-12 l-6">
+					<label class="text-size-14">Email:</label>
+					<label class="text-size-14 text-secondary">moraprueba@dominio.com</label>
+				</div>
+			</div>
+		</fieldset>
+		<fieldset>
+			<legend class="LegendCenter"><b>Solicitante</b></legend>
+			<div class="margin">
+				<div class="s-10 m-12 l-10">
+					<label class="text-size-14">Nombre Completo:</label>
+					<label class="text-size-14 text-secondary">Juan Pier San</label>
+				</div>
+				<div class="s-10 m-12 l-4">
+					<label class="text-size-14">Teléfono:</label>
+					<label class="text-size-14 text-secondary">0000000000</label>
+				</div>
+				<div class="s-10 m-12 l-6">
+					<label class="text-size-14">Email:</label>
+					<label class="text-size-14 text-secondary">moraprueba@dominio.com</label>
+				</div>
+			</div>
+		</fieldset>
+		
+	</div>
+	<link href="css/dataTables.jqueryui.css" rel="stylesheet">
+	<link href="css/jquery-ui.css" rel="stylesheet">
+	<script type="text/javascript" src="js/funcionesProyectos.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.js"></script>
+	
+	<script>
+		
+		
+		
+	</script>
+  </body>
+</html>

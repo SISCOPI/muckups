@@ -5,93 +5,107 @@
     <title></title>
 	<script type="text/javascript" src="js/funcionesGenericas.js"></script>
 	<script type="text/javascript" src="js/jquery-3.2.0.js"></script>
+	<script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
   </head>
   <body>
     <h1 id="titulo1" class="text-white margin-bottom-0 text-size-30 text-thin text-line-height-1 background-primary text-center">Seguimiento de Proyectos</h1>
     <h1 id="titulo2"  style="display:none" class="text-white margin-bottom-0 text-size-30 text-thin text-line-height-1 background-primary text-center">Evaluación de Proyecto</h1>
 	<div class="section background-white" id="seguimiento1">
-      <div class="margin">
+      
         <form class="customform" action="">
-		<div class="line" id="seguimiento">
-		<h2 class="text-primary text-center">Rol: Profesor</h2>	
-		  <table>
-			<thead>
-				<tr>
-					<td>Titulo</td>
-					<td>Semestre Alta</td>
-					<td>Fecha Alta</td>
-					<td>Asignatura</td>
-					<td>Estatus</td>
-					<td><a href="#">Detalles</a></td>
-					<td><a href="#">Acción pend</a></td>
-				</tr>
-			</thead>
-			<tr>
-				
-				<td class="text-center"></td>
-				<td class="text-center"></td>
-				<td class="text-center"></td>
-				<td class="text-center"></td>
-				<td class="text-center"></td>
-				<td class="text-center"><a href="#"  target="_blank"><img src="img/mas.png" alt="mas"></a></td>
-				<td class="text-center"></td>
-			</tr>
-		  </table>
-		  <h2 class="text-primary text-center">Rol: Asesor</h2>	
-		  <table class="">
-			<thead>
-				<tr>
-					<td>Titulo</td>
-					<td>Semestre Alta</td>
-					<td>Fecha Alta</td>
-					<td>Asignatura</td>
-					<td>Lider de Proyecto</td>
-					<td>Estatus</td>
-					<td><a href="#">Detalles</a></td>
-					<td><a href="#">Acción pend</a></td>
-					
-				</tr>
-			</thead>
-			<tr>
-				<td class="text-center"></td>
-				<td class="text-center"></td>
-				<td class="text-center"></td>
-				<td class="text-center"></td>
-				<td class="text-center"></td>
-				<td class="text-center"></td>
-				<td class="text-center"><a href="#"  target="_blank"><img src="img/mas.png" alt="mas"></a></td>
-				<td class="text-center"></td>
-			</tr>
-		  </table>
-		  <h2 class="text-primary text-center">Rol: Evaluador</h2>	
-		  <table class="">
-			<thead>
-				<tr>
-					<td>Titulo</td>
-					<td>Semestre </td>
-					<td>Asignatura</td>
-					<td>Profesor</td>
-					<td>Estatus</td>
-					<td>Fecha Eval</td>
-					<td>horario</td>
-					<td>lugar</td>
-					<td><a href="#">Evaluar</a></td>
-					
-				</tr>
-			</thead>
-			<tr>
-				<td class="text-center"></td>
-				<td class="text-center"></td>
-				<td class="text-center"></td>
-				<td class="text-center"></td>
-				<td class="text-center"></td>
-				<td class="text-center"></td>
-				<td class="text-center"></td>
-				<td class="text-center"></td>
-				<td class="text-center"><a href="#evaluar"  ><img src="img/edit.png" alt="mas"></a></td>
-					
-			</tr>
-		  </table>
+		<div id="seguimiento" >
+			<div id="tabs" class="margin">
+			  <ul>
+				<li><a href="#tabs-1">Profesor</a></li>
+				<li><a href="#tabs-2">Asesor</a></li>
+				<li><a href="#tabs-3">Evaluador</a></li>
+			  </ul>
+			  <div id="tabs-1">
+				 <table id="tproyectosp">
+					<thead>
+						<tr>
+							<th>Titulo</th>
+							<th>Semestre Alta</th>
+							<th>Fecha Alta</th>
+							<th>Asignatura</th>
+							<th>Estatus</th>
+							<th>Detalles</th>
+							<th><b>Acción pend</b></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							
+							<td class="text-center"></td>
+							<td class="text-center"></td>
+							<td class="text-center"></td>
+							<td class="text-center"></td>
+							<td class="text-center"></td>
+							<td class="text-center"><a href="#"  target="_blank"><img src="img/mas.png" alt="mas"></a></td>
+							<td class="text-center"></td>
+						</tr>
+					</tbody>
+				</table>
+			  </div>
+			  <div id="tabs-2">
+				<table id="tproyectosa">
+					<thead>
+						<tr>
+							<th>Titulo</th>
+							<th>Semestre Alta</th>
+							<th>Fecha Alta</th>
+							<th>Lider de Proyecto</th>
+							<th>Estatus</th>
+							<th>Detalles</th>
+							<th>Acción pend</th>
+							
+						</tr>
+					</thead>
+					<tr>
+						<td class="text-center">Casa inteligente</td>
+						<td class="text-center">Ene - Jun 2015</td>
+						<td class="text-center">01/01/15</td>
+						<td class="text-center">Omar Nava Pulido</td>
+						<td class="text-center">Activo</td>
+						<td class="text-center"><a href="#"  target="_blank"><img src="img/mas.png" alt="mas"></a></td>
+						<td class="text-center">NA</td>
+					</tr>
+				  </table>
+			  </div>
+			  <div id="tabs-3" >
+				<table class="" id="tproyectose">
+					<thead>
+						<tr>
+							<th>Titulo</th>
+							<th>Semestre </th>
+							<th>Asignatura</th>
+							<th>Profesor</th>
+							<th>Estatus</th>
+							<th>Fecha Eval</th>
+							<th>horario</th>
+							<th>lugar</th>
+							<th><b>Evaluar</b></td>
+							
+						</tr>
+					</thead>
+					<tr>
+						<td class="text-center"></td>
+						<td class="text-center"></td>
+						<td class="text-center"></td>
+						<td class="text-center"></td>
+						<td class="text-center"></td>
+						<td class="text-center"></td>
+						<td class="text-center"></td>
+						<td class="text-center"></td>
+						<td class="text-center"><a href="#evaluar"  ><img src="img/edit.png" alt="mas"></a></td>
+							
+					</tr>
+				  </table>
+			  </div>
+			</div>
+		
+
+		  
          </div>
 		 
 		 <div class="margin" id="evalua" style="display:none">
@@ -426,20 +440,15 @@
 			<button class="submit-form button background-primary border-radius text-white" type="submit" id="aplicar" onclick="" style="display:none">Aplicar</button>
 		</div>
         </form>
-      </div>
+      
 	</div>
+	<link href="css/jquery.dataTables.min.css" rel="stylesheet">
+	<link href="css/responsive.dataTables.css" rel="stylesheet">
+	<script src="js/jquery-ui.js"></script>
+	<script src="js/funcionesSeguimientoProyecto.js"></script>
+	<script src="js/dataTables.responsive.js"></script>
 	<script>
-	$(document).ready(function(){
-		$('a[href="#evaluar"]').click(function(){
-			//alert('Sign new href executed.'); 
-			
-			$("#seguimiento").hide();
-			$("#titulo1").hide();
-			$("#titulo2" ).show();
-			$("#aplicar" ).show();	
-			$("#evalua" ).show();			
-		});
-	});
+	
 		
 		
 	</script>

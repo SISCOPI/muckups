@@ -17,6 +17,7 @@ function fechaActual(){
 	return fh;
 }
 
+
 function siguiente(opcion){
 	
 	event.preventDefault(); 
@@ -61,23 +62,29 @@ function cargaHoras(){
 	}
 }
 $(function() {
-$( "#confirma" ).dialog({
-		autoOpen: false,
-		width: 'auto', // overcomes width:'auto' and maxWidth bug
-		maxWidth: 600,
-		height: 'auto',
-		modal: true,
-		fluid: true, //new option
-		resizable: false,
-		  buttons: {
-			Cancel: function() {
-			  $( this ).dialog( "Aceptar" );
-			}
-		  },
+	$("#fechahoy").text(fechaActual());
+	$( "#confirma" ).dialog({
+			autoOpen: false,
+			width: 'auto', // overcomes width:'auto' and maxWidth bug
+			maxWidth: 600,
+			height: 'auto',
+			modal: true,
+			fluid: true, //new option
+			resizable: false,
+			buttons : [
+			{
+				text  : 'Aceptar', 
+                click : function() {
+                             $(this).dialog('close')
+							 $("#modifU").dialog('close')
+                         }, 
+                class: 'button-acepta'
+            }
+			],
 			create:function () {
-			$(this).closest(".ui-dialog").find(".ui-button:first").addClass("acepta");
-			}
-		});
+				$(this).closest(".ui-dialog").find(".ui-button:first").addClass("acepta");
+				}
+	});
 
 //resize dialog
 

@@ -5,6 +5,7 @@ function masInfUser(){
 
 $(function () {
 	$("#fechahoy").text(fechaActual());
+	var selectedRow;
 	$.datepicker.setDefaults($.datepicker.regional['es-MX']);
 	$("#isemestre").datepicker();
 	$("#fsemestre").datepicker();
@@ -30,6 +31,23 @@ $(function () {
 	});
 	$('a[href="#modificarU"]').click(function(){
 		event.preventDefault();
+		selectedRow = $(this).parent().parent();
+		var arrDU=new Array();
+		console.log( selectedRow ); //just to see what the row looks like
+		var td = selectedRow.children('td');
+		for (var i = 0; i < td.length; ++i) {
+			console.log(i + ': ' + td.eq(i).text());
+			arrDU.push(td.eq(i).text());
+		}
+		var nombreArr=arrDU[1].split(" ")
+		var nombres=nombreArr[0];
+		var aps=nombreArr[1];
+		var ams=nombreArr[2];
+		var emails=arrDU[3];
+		$("#nombreMU").val(nombres);
+		$("#apMU").val(aps);
+		$("#amMU").val(ams);
+		$("#emailMU").val(emails);
 		$( "#modifU" ).dialog( "open" );
 	});
 	
@@ -51,18 +69,13 @@ $(function () {
 					}
 				]
 		});
-
-	
-});
-//dialogo modificar búsqueda de usuarios
-$( "#modifU" ).dialog({
-		autoOpen: false,
-		width: 'auto', // overcomes width:'auto' and maxWidth bug
-		maxWidth: 1200,
-		height: 'auto',
-		modal: true,
-		fluid: true, //new option
-		resizable: false,
+	$( "#dialog-borrar" ).dialog({
+		  title: '¡Importante!',
+		  resizable: false,
+		  height: "auto",
+		  width: 400,
+		  modal: true,
+		  autoOpen: false,
 		  buttons : [
 			{
 				text  : 'Cancelar', 
@@ -80,6 +93,92 @@ $( "#modifU" ).dialog({
             }
 			]
 		});
+		
+		$( "#dialog-modificar" ).dialog({
+		  title: '¡Importante!',
+		  resizable: false,
+		  height: "auto",
+		  width: 400,
+		  modal: true,
+		  autoOpen: false,
+		  buttons : [
+			{
+				text  : 'Cancelar', 
+                click : function() {
+                             $(this).dialog('close')
+                         }, 
+                class: 'button-acepta'
+            },
+			{
+				text  : 'Aceptar', 
+                click : function() {
+							 
+                             $(this).dialog('close')
+							 $( "#confirma" ).dialog( "open" );
+							 
+                         }, 
+                class: 'button-acepta'
+            }
+			]
+		});
+
+		$( "#confirmaAltaUser" ).dialog({
+		  title: '¡Importante!',
+		  resizable: false,
+		  height: "auto",
+		  width: 400,
+		  modal: true,
+		  autoOpen: false,
+		  buttons : [
+			{
+				text  : 'Cancelar', 
+                click : function() {
+                             $(this).dialog('close')
+                         }, 
+                class: 'button-acepta'
+            },
+			{
+				text  : 'Aceptar', 
+                click : function() {
+                             $(this).dialog('close')
+                         }, 
+                class: 'button-acepta'
+            }
+			]
+		});
+//dialogo modificar búsqueda de usuarios
+	$( "#modifU" ).dialog({
+			autoOpen: false,
+			width: 'auto', // overcomes width:'auto' and maxWidth bug
+			maxWidth: 1200,
+			height: 'auto',
+			modal: true,
+			fluid: true, //new option
+			resizable: false,
+			  buttons : [
+				{
+					text  : 'Cancelar', 
+					click : function() {
+								 $(this).dialog('close')
+							 }, 
+					class: 'button-acepta'
+				},
+				{
+					text  : 'Aceptar', 
+					click : function() {
+								$( "#dialog-modificar" ).dialog( "open" );
+							 }, 
+					class: 'button-acepta'
+				}
+				]
+		});
+			
+	//botones eventos
+	$('#altaUsuario').click(function(){
+		 $( "#confirmaAltaUser" ).dialog( "open" );
+		
+	});
+});
 
 function salir(){
 	$(".section" ).hide();

@@ -3,22 +3,22 @@
     <meta name="generator"
     content="HTML Tidy for HTML5 (experimental) for Windows https://github.com/w3c/tidy-html5/tree/c63cc39" />
     <title></title>
-	<script type="text/javascript" src="js/funcionesGenericas.js"></script>
+	
 	<script type="text/javascript" src="js/funcionesCargaAsignaturas.js"></script>
-	<script type="text/javascript" src="js/jquery-3.2.0.js"></script>
+	
 	<script type="text/javascript" src="js/jquery.floatThead.js"></script>
 	
 	
-	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+	<link href="css/jquery-ui.css" rel="stylesheet">
 
   </head>
   <body>
-  <div class="section background-white">
-    <h1 class="text-white margin-bottom-20 text-size-30 text-thin text-line-height-1 background-primary text-center">Cargar Asignaturas</h1>
+  <section class="section background-white">
+    <h1 class="text-white margin-bottom-10 text-size-30 text-thin text-line-height-1 background-primary text-center">Cargar Asignaturas</h1>
     <table class="borderTable">
 		<tr>
 			<td><h2 class="text-primary margin-bottom-0 text-s-size-12 text-center">Fecha:</h2></td>
-			<td class="text-center"><label id="fechahoy" class="text-size-16 text-secondary"></label></td>
+			<td class="text-center"><label id="fechahoy2" class="text-size-16 text-secondary"></label></td>
 			<td><h2 class="text-primary margin-bottom-0 text-s-size-12 text-center">Semestre:</h2></td>
 			<td class="text-center"><label id="" class="text-size-16 text-secondary">Enero - Junio 2017 </label></td>
 		</tr>
@@ -260,13 +260,34 @@
 		</form>
 	
 	</div>
+	<div  id="aulaD" title="Aula" class="background-white">
+		<div class="line">
+			
+			<div class="s-10 m-12 l-4">
+				<label class="text-size-14">Aula:</label>
+				<input type="text" id="aula" class="text-size-14 text-secondary"/>
+			</div>
+				
+			</div>
+
+		
 	
 	</div>
+	
+	</section>
+	<div id="confirmaCA" title="Confirmación">
+		<p>
+			<span class="ui-icon ui-icon-circle-check" style="float:left; margin:12px 12px 20px 0;"></span>
+			Su operación ha sido completada correctamente
+		</p>
+	</div>
+	<script type="text/javascript" src="js/funcionesGenericas.js"></script>
 	<script src="js/jquery-ui.js"></script>
 	<script>
+	var cellsel;
 		$(function() {
 			$("#altaAsignaturaConfirma").hide();
-			$("#fechahoy").text(fechaActual());
+			
 			cargaHoras();
 			
 			
@@ -310,6 +331,7 @@
 					}
 				]
 			});
+			
 		//	$("#thorario").fixMe();
 			 
 			$('a[href="#buscarP"]').click(function(){
@@ -326,72 +348,82 @@
 			}
 			});	
 		//sel celda
-		var isMouseDown = false,
-		isHighlighted;
-		$(".hora")
-		.mousedown(function () {
-		  isMouseDown = true;
-		  $(this).toggleClass("highlighted");
-		  isHighlighted = $(this).hasClass("highlighted");
-		  
-		 var currentRow=$(this).closest("tr"); 
-         
-         var col1=currentRow.find("td:eq(0)").text(); // get current row 1st TD value
-		 
-         
-         var data=col1+"\t";
-         
-         console.log(data);
-		  
-		  return false; // prevent text selection
-		})
-		.mouseover(function () {
-		  if (isMouseDown) {
-			$(this).toggleClass("highlighted", isHighlighted);
-		  }
-		});
-
-		$(document)
-		.mouseup(function () {
-		  isMouseDown = false;
-		});
-		
-		 $('input[type=radio][name=selectpro]').change(function() {
-        if (this.value == '1') {
-            $( "#gradop").show();
-			$( "#email").show();
-			$( "#nombrep").prop('disabled', false);
-			$( "#ap").prop('disabled', false);
-			$( "#am").prop('disabled', false);
-			$("#nombrep").val("");
-			$("#ap").val("");
-			$("#am").val("");
-			$("#nombrep").focus();
+			var isMouseDown = false,
+			isHighlighted;
 			
-        }
-        else if (this.value == '2') {
-			$( "#gradop").hide();
-			$( "#email").hide();
-			$("#nombrep").val("");
-			$("#ap").val("");
-			$("#am").val("");
-			$( "#nombrep").prop('disabled', true);
-			$( "#ap").prop('disabled', true);
-			$( "#am").prop('disabled', true);
-            $( "#existeProfesor" ).dialog( "open" );
-				event.preventDefault();
-        }
-    });
-	
-	$("#profesores tbody tr").click(function(){
-	$(this).addClass('selected').siblings().removeClass('selected');    
-	var value=$(this).find('td:first').html();
-	//alert(value);    
-	});
+			$(".hora")
+			.mousedown(function () {
+				isMouseDown = true;
+				$(this).toggleClass("highlighted");
+				isHighlighted = $(this).hasClass("highlighted");
+				console.log("isHighlighted:"+isHighlighted);
+				var currentRow=$(this).closest("tr"); 
+				cellsel=$(this);
+				console.log("cell:"+cellsel);
+				 
+				var col1=currentRow.find("td:eq(0)").text(); // get current row 1st TD value
+				 
+				 
+				var data=col1+"\t";
+				 
+				console.log("hora sel"+data);
+				if(isHighlighted){
+					$("#aulaD").dialog( "open" );
+				}
+				else{
+					cellsel.text("");
+					cellsel="";
+				}
+			
+			  return false; // prevent text selection
+			})
+			.mouseover(function () {
+			  if (isMouseDown) {
+				$(this).toggleClass("highlighted", isHighlighted);
+			  }
+			});
 
-	$('.ok').on('click', function(e){
-		alert($("#profesores tr.selected td:first").html());
-	});
+			$(document)
+			.mouseup(function () {
+			  isMouseDown = false;
+			});
+			
+			 $('input[type=radio][name=selectpro]').change(function() {
+			if (this.value == '1') {
+				$( "#gradop").show();
+				$( "#email").show();
+				$( "#nombrep").prop('disabled', false);
+				$( "#ap").prop('disabled', false);
+				$( "#am").prop('disabled', false);
+				$("#nombrep").val("");
+				$("#ap").val("");
+				$("#am").val("");
+				$("#nombrep").focus();
+				
+			}
+			else if (this.value == '2') {
+				$( "#gradop").hide();
+				$( "#email").hide();
+				$("#nombrep").val("");
+				$("#ap").val("");
+				$("#am").val("");
+				$( "#nombrep").prop('disabled', true);
+				$( "#ap").prop('disabled', true);
+				$( "#am").prop('disabled', true);
+				$( "#existeProfesor" ).dialog( "open" );
+					event.preventDefault();
+			}
+		});
+	
+		$("#profesores tbody tr").click(function(){
+		$(this).addClass('selected').siblings().removeClass('selected');    
+		var value=$(this).find('td:first').html();
+		//alert(value);    
+		});
+
+		$('.ok').on('click', function(e){
+			alert($("#profesores tr.selected td:first").html());
+		});
 	
 	////
 	

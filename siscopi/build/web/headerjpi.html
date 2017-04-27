@@ -50,12 +50,15 @@
 					<ul>
                       <li><a href="#fechas" >Fechas</a></li>
                       <li><a href="#asignaturas">Carga de Asignaturas</a></li>
+					  <li><a href="#asignaturas">Evaluaciones</a></li>
                     </ul>
 			  </li>
               <li><a>Proyectos y Propuestas</a>
 					<ul>
-                      <li><a href="#altaUsuarios" >Proyectos</a></li>
-                      <li><a href="#actuaUsuarios">Propuestas</a></li>
+                      <li><a href="#proyectosJPI">Admin Proyectos</a></li>
+                      <li><a href="#propuestasJPI">Admin Propuestas</a></li>
+					  <li><a href="#seguimientoProyectosAct">Seguimiento</a></li>
+					  
                     </ul>
 			  </li>
 			  
@@ -70,6 +73,15 @@
                   <li><a>Etapa 1</a></li>
 				  <li><a>Etapa 2</a></li>
 				  <li><a>Etapa 3</a></li>
+                </ul>
+              </li>
+			  <li><a>Reportes/Hist</a>
+                <ul>
+                  <li><a>Proyectos</a></li>
+                  <li><a>Propuestas</a></li>
+				  <li><a>Asignaturas</a></li>
+				  <li><a>Usuarios</a></li>
+				  <li><a>Otros</a></li>
                 </ul>
               </li>
               <li><a href="noticias.html">Matto Noticias</a></li>
@@ -90,7 +102,8 @@
 		}); 
 		$('a[href="#actuaUsuarios"]').click(function(){
 			$(".section" ).hide();
-			$("#actuaUser" ).show();
+			$("#dinamico").load("bajaModifUsers.html")
+			$("#dinamico").show();
 		});
 		
 		$('a[href="#fechas"]').click(function(){
@@ -114,6 +127,32 @@
 			$("#dinamico").load("cargaAsignaturas.html")
 			$("#dinamico").show();
 		});
+		$('a[href="#propuestasJPI"]').click(function(){
+			//alert('Sign new href executed.'); 
+			$(".section" ).hide();
+			$("#dinamico").load("propuestasJPI.html")
+			$("#dinamico").show();
+		});
+		$('a[href="#proyectosJPI"]').click(function(){
+			//alert('Sign new href executed.'); 
+			$(".section" ).hide();
+			$("#dinamico").load("proyectosJPI.html")
+			$("#dinamico").show();
+		});
+		
+		$('a[href="#seguimientoProyectosAct"]').click(function(){
+			$(".section" ).hide();
+			$("#dinamico" ).load("seguimientoProyectoProfesorAct.html");
+			$("#dinamico" ).show();			
+		}); 
 		
 		});
+		
+		/*$(window).scroll(function(){
+			var sticky = $('.float'),
+			scroll = $(window).scrollTop();
+
+			if (scroll >= 100) sticky.addClass('fixed');
+			else sticky.removeClass('fixed');
+		});*/
 	</script>
