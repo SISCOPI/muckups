@@ -1,6 +1,6 @@
 $(document).ready(function(){
 		$('a[href="#evaluar"]').click(function(){
-			//alert('Sign new href executed.'); 
+			
 			
 			$("#seguimiento").hide();
 			$("#titulo1").hide();
@@ -9,7 +9,14 @@ $(document).ready(function(){
 			$("#evalua" ).show();			
 		});
 		
+		$('a[href="#masPro"]').click(function(){
+		event.preventDefault();
+		$( "#masinfproyecto" ).dialog( "open" );
+
+	});
+		
 		$( "#tabs" ).tabs();
+		$( "#proyectoAccordion" ).accordion();
 		
 		//datatables
 	$('#tproyectosp').DataTable( {
@@ -23,8 +30,8 @@ $(document).ready(function(){
         "sLengthMenu":    "Mostrar _MENU_ registros",
         "sZeroRecords":   "No se encontraron resultados",
         "sEmptyTable":    "Ningún dato disponible en esta tabla",
-        "sInfo":          "Mostrando registros del _START_ al _END_ de un total de _TOTAL_",
-        "sInfoEmpty":     "Mostrando registros del 0 al 0 de un total de 0",
+        "sInfo":          "Registros del _START_ al _END_ de un total de _TOTAL_",
+        "sInfoEmpty":     "Registros del 0 al 0 de un total de 0",
         "sInfoFiltered":  "(filtrado de un total de _MAX_ registros)",
         "sInfoPostFix":   "",
         "sSearch":        "Buscar:",
@@ -32,10 +39,10 @@ $(document).ready(function(){
         "sInfoThousands":  ",",
         "sLoadingRecords": "Cargando...",
         "oPaginate": {
-            "sFirst":    "Primero",
-            "sLast":    "Último",
-            "sNext":    "Siguiente",
-            "sPrevious": "Anterior"
+            "sFirst":    "<<",
+            "sLast":    ">>",
+            "sNext":    ">",
+            "sPrevious": "<"
         },
         "oAria": {
             "sSortAscending":  ": Activar para ordenar la columna de manera ascendente",
@@ -78,7 +85,7 @@ $(document).ready(function(){
 	
 	$('#tproyectose').DataTable( {
         "pagingType": "full_numbers",
-		responsive: true,
+		
 		scrollY:        '50vh',
         scrollCollapse: true,
 		"language": {
@@ -106,4 +113,29 @@ $(document).ready(function(){
         }
 		}
     });
+	
+	//checkbox
+	 $( ".checkB" ).checkboxradio();
+	 
+	 //dialog
+	 $( "#masinfproyecto" ).dialog({
+		autoOpen: false,
+		width: 'auto', // overcomes width:'auto' and maxWidth bug
+		maxWidth: 1200,
+		height: 'auto',
+		maxHeight: 600,
+		modal: true,
+		fluid: true, //new option
+		resizable: false,
+		
+		buttons: [
+					{
+						text: "Aceptar",
+						click: function() {
+								$( this ).dialog( "close" );
+							}
+					}
+				]
+		});
+	
 	});

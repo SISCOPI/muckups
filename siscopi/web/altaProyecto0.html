@@ -5,6 +5,7 @@
     <title></title>
 	<script type="text/javascript" src="js/funcionesGenericas.js"></script>
 	<script type="text/javascript" src="js/jquery-3.2.0.js"></script>
+	
   </head>
   <body>
     <h1 class="text-white margin-bottom-0 text-size-30 text-thin text-line-height-1 background-primary text-center">Registrar proyecto</h1>
@@ -16,8 +17,8 @@
 		  <table class="">
 			<tr>
 				
-				<td class="text-center"><input type="radio" name="selectpro" value="1" id="r1"/><label for="r1">Si</label></td>
-				<td class="text-center"><input type="radio" name="selectpro" value="1" id="r2"/><label for="r2">No</label></td>
+				<td class="text-center"><input class="radioB" type="radio" name="selectpro" value="1" id="r1"/><label for="r1">Si</label></td>
+				<td class="text-center"><input class="radioB" type="radio" name="selectpro" value="1" id="r2"/><label for="r2">No</label></td>
 			</tr>
 		  </table>
          </div>
@@ -34,7 +35,7 @@
 		if($('#r2').is(':checked')) {
 			siguiente(0);
 		}
-		if($('#r1').is(':checked')) {
+		else if($('#r1').is(':checked')) {
 			siguiente(6);
 		}
 		else{
@@ -44,5 +45,8 @@
 		
 		
 	</script>
+	<link href="css/jquery-ui.css" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery-ui.js"></script>
+	<script type="text/javascript" src="js/funcionesAltaProyectos.js"></script>
   </body>
 </html>
